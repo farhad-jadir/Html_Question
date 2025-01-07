@@ -12,7 +12,7 @@ function Elements() {
     <div className="bg-[#101C28] p-6 space-y-4">
       
       {/* Heading paragraph */}
-      <Paragraph type="heading">HTML Elements and Attributes</Paragraph>
+      <Paragraph type="heading">Step 2: HTML Elements and Attributes</Paragraph>
 
       {/* Question - 6 */}
       <Paragraph>6. What is the difference between an HTML element and an HTML attribute give us example with proper Explanation. </Paragraph>
