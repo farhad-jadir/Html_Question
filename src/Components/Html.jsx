@@ -62,7 +62,7 @@ function HtmlInterview() {
       &lt;<span className="text-red-400">a</span> <span className="text-orange-500">href</span>=" <span className="text-green-500">https://example.com</span> "&gt;Visit Example&lt;/<span className="text-red-400">a</span>&gt; <br />
 
       4. Image Tag (Self-closing):
-      &lt;<span className="text-red-400">img</span> <span className="text-orange-500">src</span>=" <span className="text-green-500">image.jpg</span> " <span className="text-orange-500">alt</span>="<span className="text-green-500">Description of image</span>"Visit Example" &lt;/<span className="text-red-400">a</span>&gt; <br />
+      &lt;<span className="text-red-400">img</span> <span className="text-orange-500">src</span>=" <span className="text-green-500">image.jpg</span> " <span className="text-orange-500">alt</span>="<span className="text-green-500">Description of image</span>"Visit Example" &lt;/<span className="text-red-400">img</span>&gt; <br />
       5. Unordered List Tag:
       <img src="rtt.png" alt="" />
 
@@ -118,7 +118,7 @@ function HtmlInterview() {
 
         {/* Question - 5 */}
         
-        <Paragraph>6. How do you add comments in HTML, and why are they useful?</Paragraph>
+        <Paragraph>5. How do you add comments in HTML, and why are they useful?</Paragraph>
 
         <Paragraph type="answer">
           <Paragraph type="para">Adding Comments in HTML:</Paragraph>
