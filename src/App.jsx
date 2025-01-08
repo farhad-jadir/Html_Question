@@ -1,17 +1,20 @@
 
 import './App.css'
-import CommonHtlm from './Components/Common'
-import Elements from './Components/Elements'
-import HtmlInterciew from './Components/Html'
+// import CommonHtlm from './Components/Common'
+// // import Elements from './Components/Elements'
+// import HtmlInterciew from './Components/Html'
+import Navbar from './Components/Navbar'
 
 
 function App() {
 
   return (
     <>
-     <HtmlInterciew/>
-     <Elements/>
-     <CommonHtlm/>
+     <Navbar/>
+     {/* <HtmlInterciew/> */}
+     {/* <Elements/> */}
+     {/* <CommonHtlm/> */}
+     
     
     </>
   )

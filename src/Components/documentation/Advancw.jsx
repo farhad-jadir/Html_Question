@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import { baseParagraphClasses } from "./utils/ClassNames";
+import { baseParagraphClasses } from "../utils/ClassNames";
 
 function Paragraph({ children, type = "question", additionalClasses = "" }) {
   const paragraphClass = clsx(baseParagraphClasses[type], additionalClasses);
