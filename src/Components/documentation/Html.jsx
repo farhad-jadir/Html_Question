@@ -1,6 +1,8 @@
 import React from "react";
 import clsx from "clsx";
 import { baseParagraphClasses } from "../utils/ClassNames";
+import CodeHighlighter from "./CodeHighlighter";
+import CodeExamples from "./CodeExamples";
 
 function Paragraph({ children, type = "question", additionalClasses = "" }) {
   const paragraphClass = clsx(baseParagraphClasses[type], additionalClasses);
@@ -8,6 +10,10 @@ function Paragraph({ children, type = "question", additionalClasses = "" }) {
 }
 
 function HtmlInterview() {
+  const { basicCode, ds, videoCode, NUL, complexTable, webpageLayout, tenHtmlTag, SectionTag,  articleTag, headerTag, navTag, figureTag, formTag, detailsTag,
+    tableTag, aTag, radioSubmit, pictureTag, postar, preload, muted, loop, autoplay, controls, audioTag,videoTag, allowfullscreen, loading, sandbox, allow, Name,
+    Title, Height, Width, srcCode, labelTag, labelNestedTag, linkjon, linkRon, buttonTag, textareaCode, selectCode, Checkbox, textCode, RadioCode, ulCode,
+    olCode, liCode, divCode, marqueeCode, InlineCode, BlockCode, mixeccode, Faviconcode, globalcode, basicexamplecode  } = CodeExamples();
     
     
   return (
@@ -15,7 +21,7 @@ function HtmlInterview() {
       {/* Heading paragraph */}
       <Paragraph type="heading">Step 1: Basic HTML Questions</Paragraph>
       {/* Question - 1 */}
-      <Paragraph>1. What is HTML? Explain its purpose & Basic Syntax Of HTML ? </Paragraph>
+      <Paragraph>01. What is HTML? Explain its purpose & Basic Syntax Of HTML ? </Paragraph>
       <Paragraph type="answer">
         HTML (Hypertext Markup Language) is the standard language used to create and design webpages. It forms the basic building block for structuring content on the web. HTML is not a programming language; it is a markup language that uses tags to define elements on a webpage, such as text, images, links, forms, and more.
 
@@ -30,7 +36,11 @@ function HtmlInterview() {
         &lt;/head&gt;: Contains meta-information about the HTML document like title, character encoding, linked stylesheets, and scripts. <br />
         &lt;/body&gt;: Contains the actual content of the webpage such as text, images, links, etc. <br />
         &lt;/title&gt;: Sets the title of the webpage that appears in the browser tab. <br />
-        <Paragraph type="para">Basic Example: <img src="htt.png" alt="" /></Paragraph>
+        <Paragraph type="para">Basic Example: 
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={basicexamplecode} language="html" />
+                      </div>
+        </Paragraph>
 
 
 
@@ -41,7 +51,7 @@ function HtmlInterview() {
 
       {/* Question - 2 */}
 
-      <Paragraph>2. What are HTML tags? How are they structured? Give Us 5 Tags As A Example.</Paragraph>
+      <Paragraph>02. What are HTML tags? How are they structured? Give Us 5 Tags As A Example.</Paragraph>
       <Paragraph type="answer">
       HTML tags are the basic building blocks of an HTML document. They define the structure and content of web pages by specifying elements such as headings, paragraphs, links, images, and more. Tags are written using angle brackets (&lt; &gt;) and typically come in pairs: an opening tag (&lt;tag&gt;) and a closing tag (&lt;/tag&gt;). Some tags, however, are self-closing. <br />
       <Paragraph type="para">Structure of an HTML Tag:</Paragraph> 
@@ -74,7 +84,7 @@ function HtmlInterview() {
         
                     <Paragraph>
 
-              3. What is the difference between &lt;head&gt;, &lt;body&gt;, and &lt;html&gt; tags? & the role of the &lt;!DOCTYPE html&gt; declaration? 
+              03. What is the difference between &lt;head&gt;, &lt;body&gt;, and &lt;html&gt; tags? & the role of the &lt;!DOCTYPE html&gt; declaration? 
               </Paragraph>
                <Paragraph type="answer">
                <Paragraph type="para">Differences Between &lt;head&gt;, &lt;body&gt;, and &lt;html&gt;: <br /></Paragraph>
@@ -104,7 +114,7 @@ function HtmlInterview() {
 
         {/* Question - 4 */}
 
-        <Paragraph>4. Describe the function of the &lt;title&gt; tag. Where does it appear With Example</Paragraph>
+        <Paragraph>04. Describe the function of the &lt;title&gt; tag. Where does it appear With Example</Paragraph>
         <Paragraph type="answer">
         <Paragraph type="para">Function of the &lt;title&gt; Tag:</Paragraph>
         The &lt;title&gt; tag is used to define the title of an HTML document. It is a metadata element that appears in the browser tab or title bar of the window and helps identify the webpage's content. Additionally, the &lt;title&gt; tag is used by search engines and social media platforms when displaying the webpage in search results or sharing links. <br />
@@ -118,7 +128,7 @@ function HtmlInterview() {
 
         {/* Question - 5 */}
         
-        <Paragraph>5. How do you add comments in HTML, and why are they useful?</Paragraph>
+        <Paragraph>05. How do you add comments in HTML, and why are they useful?</Paragraph>
 
         <Paragraph type="answer">
           <Paragraph type="para">Adding Comments in HTML:</Paragraph>
@@ -140,7 +150,7 @@ function HtmlInterview() {
       <Paragraph type="heading">Step 2: HTML Elements and Attributes</Paragraph>
 
 {/* Question - 6 */}
-<Paragraph>6. What is the difference between an HTML element and an HTML attribute give us example with proper Explanation. </Paragraph>
+<Paragraph>06. What is the difference between an HTML element and an HTML attribute give us example with proper Explanation. </Paragraph>
 <Paragraph type="answer">
 <Paragraph type="para">Difference Between HTML Element and HTML Attribute:</Paragraph>
 <img src="j3.png" alt="" />
@@ -150,7 +160,7 @@ function HtmlInterview() {
 </Paragraph>
 
 {/* Question - 7 */}
-<Paragraph>7.     Explain the global attributes in HTML, such as class, id, style, and title With Example.</Paragraph>
+<Paragraph>07.     Explain the global attributes in HTML, such as class, id, style, and title With Example.</Paragraph>
 <Paragraph type="answer">
 <Paragraph type="para">Global Attributes in HTML:</Paragraph> <br />
 1. class Attribute: <br />
@@ -168,7 +178,9 @@ function HtmlInterview() {
   <Paragraph type="para">Summary Table:</Paragraph> <br />
   <img src="j4.png" alt="" /> <br />
   <Paragraph type="para">Combined Example:</Paragraph>
-  <img src="j5.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={globalcode} language="html" />
+                      </div>
   *class="box" applies shared styles. <br />
   *id="uniqueBox" applies unique styles. <br />
   *style="background-color: lightblue;" adds an inline background color. <br />
@@ -180,7 +192,7 @@ function HtmlInterview() {
 
 {/* Question - 8 */}
 
-<Paragraph>8. What is the purpose of the alt attribute in an &lt;img&gt;tag?</Paragraph>
+<Paragraph>08. What is the purpose of the alt attribute in an &lt;img&gt;tag?</Paragraph>
 <Paragraph type="answer">
   <Paragraph type="para">Purpose of the alt Attribute in an &lt;img&gt; Tag:</Paragraph> 
   The alt attribute (short for "alternative text") is used in the &lt;img&gt; tag to specify a text description of the image. This description serves multiple important purposes: <br />
@@ -213,7 +225,7 @@ function HtmlInterview() {
 </Paragraph>
 
 {/* Question - 9 */}
-      <Paragraph>9. Describe the href attribute and its role in the &lt;a&gt; tag? </Paragraph>
+      <Paragraph>09. Describe the href attribute and its role in the &lt;a&gt; tag? </Paragraph>
       <Paragraph type="answer">
           <Paragraph type="para">href Attribute in &lt;a&gt; Tag:</Paragraph>
           *Purpose: Specifies the URL or link destination for the &lt;a&gt; (anchor) tag.
@@ -269,7 +281,7 @@ function HtmlInterview() {
       <Paragraph type="heading"> Step 3: Common HTML Tags</Paragraph> <br />
       {/* Question - 11 */}
 
-            <Paragraph>11. How to add favicon in HTML & Why ?</Paragraph> <br />
+            <Paragraph>11. How to add favicon in HTML & Why ?</Paragraph> 
             <Paragraph type="answer">
                 <Paragraph type="para">Steps to add a favicon:</Paragraph>
                 1. Prepare your Favicon Image: The image should be a square (typically 16x16, 32x32, or 48x48 pixels), and usually in .ico, .png, or .jpg format. <br />
@@ -277,7 +289,9 @@ function HtmlInterview() {
                 2. Place the Favicon Image: Upload the favicon image to your website's root directory or any folder in your project. <br />
 
                 3. Link the Favicon in HTML: Add this &lt;link&gt; tag inside the &lt;/head&gt; section of your HTML document. <br />
-                <img src="j6.png" alt="" /> 
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={Faviconcode} language="html" />
+                      </div>
                 Replace "path/to/your/favicon.ico" with the actual path to your favicon file. <br />
                 <Paragraph type="para">Why Add a Favicon?</Paragraph>
                 1. Brand Identity: A favicon reinforces your website's brand and provides a visual representation of your website, making it easily identifiable in browser tabs. <br />
@@ -291,7 +305,7 @@ function HtmlInterview() {
 
             {/* Question -12 */}
 
-            <Paragraph>12. What is formatting in HTML?</Paragraph> <br />
+            <Paragraph>12. What is formatting in HTML?</Paragraph>
             <Paragraph type="answer">
                 Formatting in HTML refers to the process of using HTML tags to style and structure text for better readability and presentation on a web page. It includes making text bold, italic, underlined, or adding headings and paragraphs.
                 <Paragraph type="para">Common Formatting Tags in HTML:</Paragraph>
@@ -300,7 +314,7 @@ function HtmlInterview() {
             </Paragraph> <br />
             {/* Question -13 */}
 
-            <Paragraph>13. What Is Inline and block elements in html5 Give Us The Proper Explain With Example?</Paragraph> <br />
+            <Paragraph>13. What Is Inline and block elements in html5 Give Us The Proper Explain With Example?</Paragraph>
             <Paragraph type="answer">
                 In HTML5, elements are classified as inline or block based on their default behavior in the document flow. <br />
                 <Paragraph type="para">Inline Elements:</Paragraph>
@@ -308,21 +322,27 @@ function HtmlInterview() {
                 2. Characteristics: <br />
                 *Do not force a line break. *Can contain text or other inline elements. *Width and height cannot be set (default behavior). <br />
                 3. Examples: <br />
-                <img src="j7.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={InlineCode} language="html" />
+                      </div>
                 *These elements appear on the same line unless styled otherwise. <br />
                 <Paragraph type="para">Block Elements: </Paragraph>
                 1. Definition: Block elements always start on a new line and take up the full width available by default. <br />
                 2. Characteristics: *Begin on a new line. *Can contain other block elements, inline elements, or text. *Width, height, margin, and padding can be customized. <br />
                 3. Examples: <br />
-                <img src="j9.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={BlockCode} language="html" />
+                      </div>
                 *These elements stack vertically by default.
                 <Paragraph type="para">Example in Context:</Paragraph>
-                <img src="jj3.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={mixeccode} language="html" />
+                      </div>
             </Paragraph>
 
             {/* Question -14 */}
 
-            <Paragraph>14. What is a marquee?</Paragraph> <br />
+            <Paragraph>14. What is a marquee?</Paragraph> 
             <Paragraph type="answer">
                  A marquee in HTML is an element that creates a scrolling or moving effect for text or images across the web page. It was introduced in older versions of HTML but is now considered obsolete and is not recommended for modern web design. Instead, CSS and JavaScript are used to achieve similar effects.
                 <Paragraph type="para">Syntax of Marquee:</Paragraph>
@@ -344,7 +364,9 @@ function HtmlInterview() {
                 6. width and height: Specifies the size of the marquee. <br />
                 *Example: &lt; <span className="text-red-400">marquee</span> <span className="text-yellow-400">width</span> = <span className="text-green-500">"300"</span> <span className="text-yellow-400">height</span> = <span className="text-green-500">"50"</span> &gt;Scrolling within a box.&lt;/<span className="text-red-400">marquee</span>&gt; <br />
                 <Paragraph type="para">Example:</Paragraph>
-                <img src="jj2.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={marqueeCode} language="html" />
+                      </div>
                 <Paragraph type="para">Why Avoid &lt;marquee&gt;?</Paragraph>
                 1. Deprecated: &lt;marquee&gt; is not supported in HTML5 and modern browsers. <br />
                 2. Accessibility Issues: It can be distracting or hard to read for users with disabilities. <br />
@@ -354,7 +376,7 @@ function HtmlInterview() {
 
             {/* Question - 15 */}
 
-            <Paragraph>15. Explain the difference between &lt;p&gt;, &lt;span&gt;, and &lt;div&gt; tags. When would you use each?</Paragraph> <br />
+            <Paragraph>15. Explain the difference between &lt;p&gt;, &lt;span&gt;, and &lt;div&gt; tags. When would you use each?</Paragraph> 
             <Paragraph type="answer">
                 <Paragraph type="para">Difference between &lt;p&gt;, &lt;span&gt;, and &lt;div&gt; tags:</Paragraph>
                 1. &lt;p&gt; (Paragraph): <br />
@@ -370,7 +392,9 @@ function HtmlInterview() {
                 *Behavior: Block-level element, used for layout and structuring. <br />
                 *Usage: For larger sections or wrapping multiple elements. <br />
                 *Example: 
-                <img src="jj5.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={divCode} language="html" />
+                      </div>
                 <Paragraph type="para">When to Use:</Paragraph>
                 * &lt;p&gt;: For paragraphs or text content. <br />
                 * &lt;span&gt;: For small, inline styling or text grouping. <br />
@@ -379,23 +403,29 @@ function HtmlInterview() {
             </Paragraph> <br />
 
             {/* Question -16 */}
-            <Paragraph>16. Describe the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags for creating lists.</Paragraph> <br />
+            <Paragraph>16. Describe the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags for creating lists.</Paragraph>
             <Paragraph type="answer">
                 <Paragraph type="para">HTML Tags for Lists:</Paragraph>
                 1. &lt;ul&gt; (Unordered List): <br />
                 * Purpose: Creates a list with bullet points. <br />
                 * Usage: For non-sequential items. <br />
                 * Example:
-                <img src="jj6.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={ulCode} language="html" />
+                      </div>
                 2. &lt;ol&gt; (Ordered List): <br />
                 * Purpose: Creates a numbered list. <br />
                 * Usage: For sequential or ranked items. <br />
                 * Example: 
-                <img src="jj7.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={olCode} language="html" />
+                      </div>
                 3. &lt;li&gt; (List Item): <br />
                 * Purpose: Defines an item in a list (used inside &lt;ul&gt; or &lt;ol&gt;). <br />
                 * Example: 
-                <img src="jj8.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={liCode} language="html" />
+                      </div>
                 <Paragraph type="para">Key Points:</Paragraph>
                 * Use &lt;ul&gt; for unordered lists.
                 * Use &lt;ol&gt; for ordered lists.
@@ -405,7 +435,7 @@ function HtmlInterview() {
 
             {/* Question -17 */}
 
-            <Paragraph>17. Describe how &lt;input&gt; works and some of its types, such as text, radio, and checkbox.</Paragraph> <br />
+            <Paragraph>17. Describe how &lt;input&gt; works and some of its types, such as text, radio, and checkbox.</Paragraph> 
             <Paragraph type="answer">
                 <Paragraph type="para">HTML &lt;input&gt; Tag:</Paragraph>
                 * Purpose: Collects user input in forms. <br />
@@ -414,15 +444,21 @@ function HtmlInterview() {
                 1. Text (type="text"): <br />
                 * Purpose: For single-line text input. <br />
                 * Example: 
-                <img src="r1.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={textCode} language="html" />
+                      </div>
                 2. Radio (type="radio"): <br />
                 * Purpose: For selecting one option from a group. <br />
                 * Example: <br />
-                <img src="r2.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={RadioCode} language="html" />
+                      </div>
                 3. Checkbox (type="checkbox"): <br />
                 * Purpose: For selecting multiple options. <br />
                 * Example: <br />
-                <img src="r3.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={Checkbox} language="html" />
+                      </div>
                 <Paragraph type="para">Key Points:</Paragraph>
                 * &lt;input&gt; is versatile and adapts to the type value.
                 * Use text for single-line input, radio for single-choice, and checkbox for multiple-choice.
@@ -430,41 +466,51 @@ function HtmlInterview() {
 
             {/* Question- 18 */}
 
-            <Paragraph>18. What are &lt;button&gt;, &lt;textarea&gt;, and &lt;select&gt; tags, and how do they function?</Paragraph> <br />
+            <Paragraph>18. What are &lt;button&gt;, &lt;textarea&gt;, and &lt;select&gt; tags, and how do they function?</Paragraph>
             <Paragraph type="answer">
                 <Paragraph type="para">HTML Tags Overview:</Paragraph>
                 1. &lt;button&gt;: <br />
                 * Purpose: Creates a clickable button. <br />
                 * Function: Used for form submission or custom actions with scripts. <br />
                 * Example: 
-                <img src="k1.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={buttonTag} language="html" />
+                      </div>
                 2. &lt;textarea&gt;: <br />
                 * Purpose: Creates a multi-line text input field. <br />
                 * Function: Used for long user inputs like comments or messages. <br />
                 * Example:
-                <img src="k2.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={textareaCode} language="html" />
+                      </div>
                 3. &lt;select&gt;: <br />
                 * Purpose: Creates a dropdown menu. <br />
                 * Function: Allows users to select one or multiple options. <br />
                 * Example:
-                <img src="k3.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={selectCode} language="html" />
+                      </div>
                 <Paragraph type="para">Key Points:</Paragraph>
                 * &lt;button&gt;: For actions like submitting forms. * &lt;textarea&gt;: For multi-line text input. * &lt;select&gt;: For dropdown options.
             </Paragraph> <br />
             
             {/* Question- 19 */}
 
-            <Paragraph>19. How to link CSS to HTML?</Paragraph> <br />
+            <Paragraph>19. How to link CSS to HTML?</Paragraph>
             <Paragraph type="answer">
             To link a CSS file to an HTML document, use the &lt;link&gt; tag in the &lt;head&gt; section of your HTML file.
             <Paragraph type="para">Syntax:</Paragraph>
-            <img src="k5.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={linkjon} language="html" />
+                      </div>
             <Paragraph type="para">Steps:</Paragraph>
             1. Create a CSS File: Save your CSS code in a .css file (e.g., styles.css). <br />
             2. Add the &lt;link&gt; Tag: Place the &lt;link&gt; tag in the &lt;head&gt; section of your HTML file. <br />
             3. Specify the Path: Use the href attribute to provide the file path to your CSS. <br />
             <Paragraph type="para">Example:</Paragraph>
-            <img src="k6.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={linkRon} language="html" />
+                      </div>
             <Paragraph type="para">Key Points:</Paragraph>
             * Use &lt;link&gt; for external stylesheets.
             * Ensure the href path to the CSS file is correct.
@@ -474,7 +520,7 @@ function HtmlInterview() {
 
             {/* Question - 20*/}
 
-            <Paragraph>20. What is the &lt;label&gt; tag, and how is it associated with form inputs?</Paragraph> <br />
+            <Paragraph>20. What is the &lt;label&gt; tag, and how is it associated with form inputs?</Paragraph> 
             <Paragraph type="answer">
                 <Paragraph type="para">HTML &lt;label&gt; Tag:</Paragraph>
                 The &lt;label&gt; tag in HTML is used to define a label for a form input element. It improves accessibility by associating descriptive text with form controls.
@@ -484,9 +530,13 @@ function HtmlInterview() {
                 <Paragraph type="para">Ways to Use &lt;label&gt;:</Paragraph>
                 1. Using the for Attribute:
                     * The for attribute links the label to an input by matching the input's id.
-                    <img src="k8.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={labelTag} language="html" />
+                      </div>
                     2. Nesting the Input Inside &lt;label&gt;: * The label automatically associates with the input when the input is inside the &lt;label&gt;.
-                    <img src="k9.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                         <CodeHighlighter code={labelNestedTag} language="html" />
+                      </div>
                     <Paragraph type="para">Benefits:</Paragraph>
                     * Accessibility: Improves usability for assistive technologies. <br />
                     * Click Target: Clicking the label focuses the associated input. <br />
@@ -502,28 +552,47 @@ function HtmlInterview() {
 
             {/* Question -21 */}
 
-            <Paragraph>21. What is the &lt;iframe&gt; tag, and what are some common attributes used with it?</Paragraph> <br />
+            <Paragraph>21. What is the &lt;iframe&gt; tag, and what are some common attributes used with it?</Paragraph> 
             <Paragraph type="answer">
             The &lt;iframe&gt; tag in HTML is used to embed another HTML document within the current document. It creates an inline frame that can display web pages, videos, maps, or other content from external or internal sources.
             <Paragraph type="para">Common Attributes of the &lt;iframe&gt; Tag</Paragraph>
             1. src: Specifies the URL of the document to be embedded.
-            <img src="a1.png" alt="" />
-            2. width and height: Define the dimensions of the &lt;iframe&gt; in pixels or percentage.
-            <img src="a2.png" alt="" />
-            3. title: Provides a description of the iframe content for accessibility purposes.
-            <img src="a3.png" alt="" />
-            4. frameborder (Deprecated): Specifies whether a border should be displayed around the iframe. Use CSS for modern designs.
-            <img src="a4.png" alt="" />
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                    <CodeHighlighter code={srcCode} language="html" />
+                </div>
+            2. width: Specifies the width of the &lt;iframe&gt;, either in pixels or as a percentage.
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                    <CodeHighlighter code={Width} language="html" />
+                </div>
+            3. height: Specifies the height of the &lt;iframe&gt;, either in pixels or as a percentage.
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                    <CodeHighlighter code={Height} language="html" />
+                </div>
+            4. title: Provides a description of the iframe content for accessibility purposes.
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                    <CodeHighlighter code={Title} language="html" />
+                </div>
+            
             5. allow: Specifies permissions for the iframe's content, such as using a camera, microphone, or fullscreen mode.
-            <img src="a5.png" alt="" />
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                    <CodeHighlighter code={allow} language="html" />
+                </div>
             6. sandbox: *allow-same-origin. * allow-scripts. * allow-popups
-            <img src="a7.png" alt="" />
-            7. loading: Specifies whether the iframe should load lazily (lazy) or eagerly (eager). This helps optimize page performance.
-            <img src="a8.png" alt="" />
-            8. name: Assigns a name to the iframe, which can be used as a target for links or scripts.
-            <img src="a9.png" alt="" />
-            9. srcdoc: Allows you to define the HTML content directly within the iframe instead of using an external URL.
-            <img src="a11.png" alt="" />
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                    <CodeHighlighter code={sandbox} language="html" />
+                </div>
+            7. name: Assigns a name to the &lt;iframe&gt; that can be used as a target for links or forms.
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                    <CodeHighlighter code={Name} language="html" />
+                </div>
+            8. loading: * Controls lazy loading behavior for the &lt;iframe&gt;. ** Values: lazy (load only when in the viewport), eager (load immediately).
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                    <CodeHighlighter code={loading} language="html" />
+                </div>
+            9. allowfullscreen: Allows the &lt;iframe&gt; content to be displayed in fullscreen mode.
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                    <CodeHighlighter code={allowfullscreen} language="html" />
+                </div>
             <Paragraph type="para">Use Cases:</Paragraph>
             * Embedding videos (e.g., YouTube). * Displaying maps (e.g., Google Maps). * Loading external web pages. * Embedding interactive content like forms or tools.
             <Paragraph type="para">Security Considerations:</Paragraph>
@@ -538,30 +607,47 @@ function HtmlInterview() {
 
              {/* Question - 22 */}
 
-             <Paragraph>22. Describe how the &lt;audio&gt; and &lt;video&gt; tags work, including common attributes like controls, autoplay, and loop.</Paragraph> <br />
+             <Paragraph>22. Describe how the &lt;audio&gt; and &lt;video&gt; tags work, including common attributes like controls, autoplay, and loop.</Paragraph> 
              <Paragraph type="answer">
              The &lt;audio&gt; and &lt;video&gt; tags in HTML are used to embed audio and video content into a webpage. They provide built-in playback functionality and eliminate the need for third-party plugins like Flash.
              <Paragraph type="para">&lt;audio&gt; Tag:</Paragraph>
              The &lt;audio&gt; tag is used to embed audio files such as MP3, Ogg, or WAV.
-             <img src="b1.png" alt="" />
-             <Paragraph type="para">&lt;video&gt; Tag</Paragraph>
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                    <CodeHighlighter code={audioTag} language="html" />
+                </div>
+             <Paragraph type="para">&lt;video&gt; Tag:</Paragraph>
              The &lt;video&gt; tag is used to embed video files such as MP4, WebM, or Ogg.
-             <img src="b2.png" alt="" />
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                    <CodeHighlighter code={videoTag} language="html" />
+                </div>
              <Paragraph type="para">Common Attributes (Shared by Both Tags):</Paragraph>
              1. controls: Adds playback controls such as play, pause, volume, and progress bar.
-             <img src="b1.png" alt="" />
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                    <CodeHighlighter code={controls} language="html" />
+                </div>
              2. autoplay: * Starts playing the media as soon as it is loaded.* Important: Include the muted attribute for autoplaying videos to prevent browsers from blocking playback.
-             <img src="b3.png" alt="" />
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                    <CodeHighlighter code={autoplay} language="html" />
+                </div>
+             
              3. loop: Makes the media start over again when it reaches the end.
-             <img src="b9.png" alt="" />
+
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                    <CodeHighlighter code={loop} language="html" />
+                </div>
              4. muted: Starts the media with the sound muted.
-             <img src="b6.png" alt="" />
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                    <CodeHighlighter code={muted} language="html" />
+                </div>
              5. preload:  *auto: Load the whole file.* metadata: Load only metadata (e.g., duration).* none: Don’t preload anything.
-             <img src="b11.png" alt="" />
-             6. src: Specifies the source file for the media.
-             <img src="b12.png" alt="" />
-             7. poster (For &lt;video&gt; only): Specifies an image to display while the video is loading or until the user presses play.
-              <img src="b13.png" alt="" />
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                    <CodeHighlighter code={preload} language="html" />
+                </div>
+             
+             6. poster (For &lt;video&gt; only): Specifies an image to display while the video is loading or until the user presses play.
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                    <CodeHighlighter code={postar} language="html" />
+                </div>
               For better browser compatibility, use the &lt;source&gt; element to specify multiple formats for audio or video files. 
              
 
@@ -572,7 +658,7 @@ function HtmlInterview() {
 
              {/* Question -23 */}
 
-             <Paragraph>23. Explain the &lt;picture&gt; tag and its usage in responsive design.</Paragraph> <br />
+             <Paragraph>23. Explain the &lt;picture&gt; tag and its usage in responsive design.</Paragraph>
              <Paragraph type="answer">
 
                      The &lt;picture&gt; tag in HTML is a container element used to provide multiple image sources for a single image display. It plays a crucial role in responsive web design, allowing developers to deliver optimized images based on the user's device, screen size, or resolution.
@@ -586,7 +672,9 @@ function HtmlInterview() {
                      3. Support for Modern Formats: <br />
                      * You can specify modern image formats like WebP or AVIF for compatible browsers while providing fallback formats like JPEG or PNG for others.
                      <Paragraph type="para">Syntax of the &lt;picture&gt; Tag:</Paragraph>
-                     <img src="c1.png" alt="" />
+                     <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                          <CodeHighlighter code={pictureTag} language="html" />
+                      </div>
                      <Paragraph type="para">Benefits in Responsive Design:</Paragraph>
                      1. Performance Optimization: Reduces load time by serving appropriately sized images for different devices. <br />
                      2. Flexibility: Provides tailored experiences for various resolutions and conditions. <br />
@@ -598,10 +686,12 @@ function HtmlInterview() {
 
              {/* Question - 24 */}
 
-             <Paragraph>24. Design a basic form that includes text input, radio buttons, a checkbox, and a submit button.</Paragraph> <br />
+             <Paragraph>24. Design a basic form that includes text input, radio buttons, a checkbox, and a submit button.</Paragraph> 
              <Paragraph type="answer">
                       Here is a basic HTML form with text input, radio buttons, a checkbox, and a submit button:
-                      <img src="d1.png" alt="" />
+                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                          <CodeHighlighter code={radioSubmit} language="html" />
+                      </div>
                       This form contains: <br />
                       * A text input for the user's name. <br />
                       * Radio buttons for selecting gender. <br />
@@ -612,36 +702,141 @@ function HtmlInterview() {
 
              {/* Question -25 */}
 
-             <Paragraph>25. Embed a responsive YouTube video using the &lt;iframe&gt; tag.</Paragraph> <br />
+             <Paragraph>25. Embed a responsive YouTube video using the &lt;iframe&gt; tag.</Paragraph> 
              <Paragraph type="answer">
                     Here is an example of embedding a responsive YouTube video using the &lt;iframe&gt; tag tag:
-                    <img src="d2.png" alt="" />
-                    <img src="d4.png" alt="" />
+                    
              </Paragraph> <br />
+             <div className="  px-0 sm:px-20 md:px-64 rounded-md">
+                 <CodeHighlighter code={videoCode} language="html" />
+             </div> <br />
 
              {/* Question -26 */}
 
-             <Paragraph>26. Make a collapsible/expandable section using &lt;details&gt; and &lt;summary&gt; tags.</Paragraph> <br />
+             <Paragraph>26. Make a collapsible/expandable section using &lt;details&gt; and &lt;summary&gt; tags.</Paragraph> 
 
              <Paragraph type="answer">
                   Here’s how you can create a collapsible/expandable section using the &lt;details&gt; and &lt;summary&gt; tags:
-                  <img src="d5.png" alt="" />
+                  
              </Paragraph> <br />
+             <div className="  px-0 sm:px-20 md:px-64 rounded-md">
+                 <CodeHighlighter code={ds} language="html" />
+             </div> <br />
+
 
              {/* Question - 27 */}
 
-             <Paragraph>27. Create a simple navigation bar using &lt;nav&gt;, &lt;ul&gt;, and &lt;li&gt; tags with three links.</Paragraph> <br />
+             <Paragraph>27. Create a simple navigation bar using &lt;nav&gt;, &lt;ul&gt;, and &lt;li&gt; tags with three links.</Paragraph>
 
              <Paragraph type="answer">
                 Here’s a simple navigation bar using the  &lt;nav&gt;, &lt;ul&gt;, and &lt;li&gt; tags with three links:
-                <img src="d6.png" alt="" />
-                <img src="d8.png" alt="" />
-                <img src="d9.png" alt="" />
-             </Paragraph> <br />
+               
+             </Paragraph>
+             <div className="  px-0 sm:px-20 md:px-64 rounded-md">
+                 <CodeHighlighter code={NUL} language="html" />
+             </div> <br />
 
              {/* Question - 28 */}
 
-             <Paragraph></Paragraph>
+             <Paragraph>28. Create a complex table with merged cells (using colspan and rowspan) and include a &lt;caption&gt;, &lt;thead&gt;, &lt;tfoot&gt;, and &lt;tbody&gt;. Add descriptive &lt;th&gt; elements for accessibility and structure.</Paragraph>
+             <Paragraph type="answer">
+                 Here's an example of a complex table with merged cells using colspan and rowspan, and including semantic elements such as &lt;caption&gt;, &lt;thead&gt;, &lt;tfoot&gt;, and &lt;tbody&gt:
+             </Paragraph>
+             <div className="  px-0 sm:px-20 md:px-64 rounded-md">
+                 <CodeHighlighter code={complexTable} language="html" />
+             </div> <br />
+
+              {/* Question - 29 */}
+
+              <Paragraph>29. Create a simple webpage layout with a header, main section, and footer using only HTML and semantic tags.</Paragraph>
+              <Paragraph type="answer">
+                  Here’s an example of a simple webpage layout using semantic HTML tags for a header, main section, and footer:
+              </Paragraph>
+
+              <div className="  px-0 sm:px-20 md:px-64 rounded-md">
+                 <CodeHighlighter code={webpageLayout} language="html" />
+             </div> <br />
+
+             {/* Question - 30 */}
+
+             <Paragraph>30. Write Your favourite 10 HTML Tags & Explain Us Why That’s Your favourite tags. </Paragraph>
+             <Paragraph type="answer">
+                Here are my 10 favorite HTML tags, along with explanations of why they are useful and powerful:
+                <Paragraph type="para"> 1. &lt;div&gt; </Paragraph>
+                * Why it's a favorite: It's the most versatile tag and serves as a container for grouping and styling elements. Whether you're building layouts, applying styles, or organizing content, &lt;div&gt; is a go-to tag.
+                <Paragraph type="para">Example: </Paragraph>
+                <div className="  px-0 sm:px-20 md:px-40 rounded-md">
+                  <CodeHighlighter code={tenHtmlTag} language="html" />
+                </div>
+
+                <Paragraph type="para"> 2. &lt;section&gt; </Paragraph>
+                * Why it's a favorite: Semantically defines sections of a document, making the content more accessible and organized. Ideal for dividing pages into logical parts.
+                <Paragraph type="para">Example: </Paragraph>
+                <div className="  px-0 sm:px-20 md:px-40 rounded-md">
+                  <CodeHighlighter code={SectionTag} language="html" />
+                </div>
+
+                <Paragraph type="para"> 3. &lt;article&gt; </Paragraph>
+                * Why it's a favorite: Perfect for encapsulating independent pieces of content, such as blog posts or news articles. Enhances readability and SEO.
+                <Paragraph type="para">Example: </Paragraph>
+                <div className="  px-0 sm:px-20 md:px-40 rounded-md">
+                  <CodeHighlighter code={articleTag} language="html" />
+                </div>
+
+                <Paragraph type="para"> 4. &lt;header&gt; </Paragraph>
+                * Why it's a favorite: Makes it easy to define the header area of a webpage or a section. It's semantic, descriptive, and improves structure.
+                <Paragraph type="para">Example: </Paragraph>
+                <div className="  px-0 sm:px-20 md:px-40 rounded-md">
+                  <CodeHighlighter code={headerTag} language="html" />
+                </div>
+
+                <Paragraph type="para"> 5. &lt;nav&gt; </Paragraph>
+                * Why it's a favorite: Organizes navigation links in a semantic and accessible way. It makes it clear that the contained links are for navigation.
+                <Paragraph type="para">Example: </Paragraph>
+                <div className="  px-0 sm:px-20 md:px-40 rounded-md">
+                  <CodeHighlighter code={navTag} language="html" />
+                </div>
+
+                <Paragraph type="para"> 6. &lt;figure&gt; and &lt;figcaption&gt; </Paragraph>
+                * Why they're favorites: Together, they offer a semantic way to include images and their captions, improving context and accessibility.
+                <Paragraph type="para">Example: </Paragraph>
+                <div className="  px-0 sm:px-20 md:px-40 rounded-md">
+                  <CodeHighlighter code={figureTag} language="html" />
+                </div>
+
+                <Paragraph type="para"> 7. &lt;form&gt; </Paragraph>
+                * Why it's a favorite: Enables interaction between the user and the server. Whether for login, registration, or feedback, forms are the backbone of web interactivity.
+
+                <Paragraph type="para">Example: </Paragraph>
+                <div className="  px-0 sm:px-20 md:px-40 rounded-md">
+                  <CodeHighlighter code={formTag} language="html" />
+                </div>
+
+                <Paragraph type="para"> 8. &lt;details&gt; and &lt;summary&gt; </Paragraph>
+                * Why they're favorites: They provide an easy way to create collapsible content without needing JavaScript. Great for FAQs or hiding extra information.
+                <Paragraph type="para">Example: </Paragraph>
+                <div className="  px-0 sm:px-20 md:px-40 rounded-md">
+                  <CodeHighlighter code={detailsTag} language="html" />
+                </div>
+
+                <Paragraph type="para"> 9. &lt;table&gt; </Paragraph>
+                * Why it's a favorite: Organizes complex data into rows and columns, making it easier to display and analyze structured information.
+                <Paragraph type="para">Example: </Paragraph>
+                <div className="  px-0 sm:px-20 md:px-40 rounded-md">
+                  <CodeHighlighter code={tableTag} language="html" />
+                </div>
+
+                <Paragraph type="para"> 10. &lt;a&gt; </Paragraph>
+                * Why it's a favorite: Hyperlinks are the foundation of the web, and the &lt;a&gt; tag connects pages, resources, and documents seamlessly.
+                <Paragraph type="para">Example: </Paragraph>
+                <div className="  px-0 sm:px-20 md:px-40 rounded-md">
+                  <CodeHighlighter code={aTag} language="html" />
+                </div>
+
+
+                
+             </Paragraph>
+
              
 
 
