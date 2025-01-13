@@ -31,7 +31,7 @@ function HtmlInterview() {
         <Paragraph type="para">Basic Syntax of HTML:</Paragraph>
         The basic structure of an HTML document includes: <br />
 
-        !DOCTYPE html: Declares the document type and version of HTML. This is placed at the top of the HTML document. <br />
+        &lt;!DOCTYPE html&gt;: Declares the document type and version of HTML. This is placed at the top of the HTML document. <br />
         &lt;/html&gt;: The root element that wraps all the content of the page. <br />
         &lt;/head&gt;: Contains meta-information about the HTML document like title, character encoding, linked stylesheets, and scripts. <br />
         &lt;/body&gt;: Contains the actual content of the webpage such as text, images, links, etc. <br />
