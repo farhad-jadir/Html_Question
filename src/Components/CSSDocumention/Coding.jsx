@@ -268,6 +268,200 @@ const [UseFlexbox] = useState(`display: flex;
   grid-template-rows: auto;
 }
 `);
+
+const [responsivelayout] = useState(`/* Base styles for mobile */
+body {
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* For tablets (768px and up) */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+
+/* For desktops (1024px and up) */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+    padding: 30px;
+  }
+}
+`);
+
+const [textalign] = useState(`.parent {
+  text-align: center;
+}
+`);
+const [marginauto] = useState(`.child {
+  margin: auto;
+  width: 50%; /* or a specific width */
+}
+`);
+const [flexboxc] = useState(`.parent {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+}
+`);
+const [Usinggrid] = useState(`.parent {
+  display: grid;
+  place-items: center; /* Centers both horizontally and vertically */
+}
+`);
+const [Usingposition] = useState(`.child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+`);
+const [CSSGridWorks] = useState(`.container {
+  display: grid;
+  grid-template-rows: 100px 200px; /* First row is 100px, second row is 200px */
+  grid-template-columns: 1fr 2fr;  /* Two columns: first takes 1 fraction, second takes 2 fractions of space */
+}
+`);
+const [roww] = useState(`.container {
+  display: flex;
+  flex-direction: row;
+}
+`);
+const [rowreverse] = useState(`.container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+`);
+const [columnm] = useState(`.container {
+  display: flex;
+  flex-direction: column;
+}
+`);
+const [flexdirection] = useState(`.container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+`);
+const [differentstyles] = useState(`@media (max-width: 768px) {
+  .element {
+    font-size: 14px;
+  }
+}
+`);
+const [metaTag] = useState(`<meta name="viewport" content="width=device-width, initial-scale=1">
+`);
+const [HTMLStructure] = useState(`<div class="wrapper">
+  <main class="content">Main content</main>
+  <footer class="footer">Footer</footer>
+</div>
+`);
+  const [CssStructure] = useState(`html, body {
+  height: 100%; /* Ensure the full height includes the viewport */
+  margin: 0;    /* Remove default margin */
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.content {
+  flex: 1; /* Push the footer to the bottom */
+}
+
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+`);
+const [forMobile] = useState(`body {
+  font-size: 16px;
+  padding: 10px;
+}
+`);
+const [LargerScreens] = useState(`@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+    padding: 30px;
+  }
+}
+`);
+const [universalselector] = useState(`* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+`);
+const [Fileextension] = useState(`$primary-color: #3498db;
+
+body {
+  font-family: Arial, sans-serif;
+  background: $primary-color;
+
+  h1 {
+    color: darken($primary-color, 10%);
+  }
+}
+`);
+const [fextension] = useState(`@primary-color: #3498db;
+
+body {
+  font-family: Arial, sans-serif;
+  background: @primary-color;
+
+  h1 {
+    color: darken(@primary-color, 10%);
+  }
+}
+`);
+const [CustomProperties] = useState(`@primary-color: #3498db;
+
+  body {
+    font-family: Arial, sans-serif;
+    background: @primary-color;
+  
+    h1 {
+      color: darken(@primary-color, 10%);
+    }
+  }
+  `);
+  const [DefineKeyframes] = useState(`@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+`);
+    const [ApplyAnimation] = useState(`.animated {
+  animation: slideIn 2s ease-in-out infinite;
+}
+`);
+const [KeyFeatures] = useState(`.box {
+  transition: all 0.5s ease-in-out;
+}
+`);
+const [KeyFeaturesss] = useState(`.box:hover {
+  transform: scale(1.2);
+}
+`);
+const [PathsComplex] = useState(`<path d="M10 10 H 90 V 90 H 10 Z" fill="green" />
+`);
+
   
 
 
@@ -276,7 +470,8 @@ const [UseFlexbox] = useState(`display: flex;
     CSSSelectors, ElementSelector, ClassSelector, IDSelector, GroupSelector, DescendantSelector, Targetsdirect, AdjacentSiblin, GeneralSibling, Pseudoclasses, Pseudoelements,
     CombiningSelectors, hoverCode, nthchild, focusCode, beforeCode, firstline, afterCode, Inheritable, Force, importantRule, displayvalue, positionproperty, Paddingcode, Margincode,
     Bordercode, flexgrowcode, flexshrinkcode,flexbasiscode, ExampleShorthand, widthcode, minwidthcode,maxwidthcode,ExampleCombined, zindexcode, opacitycode, visibilitycode, opacityvisibility,
-    UseFlexbox, flexBoxcode, UseCSSGrid, CSSgridcode
+    UseFlexbox, flexBoxcode, UseCSSGrid, CSSgridcode, responsivelayout, textalign, marginauto, flexboxc, Usinggrid, Usingposition, CSSGridWorks, flexdirection, columnm, rowreverse, roww, differentstyles,
+    metaTag, HTMLStructure, CssStructure, forMobile, LargerScreens, universalselector, Fileextension, fextension, CustomProperties, DefineKeyframes, ApplyAnimation, KeyFeatures, KeyFeaturesss, PathsComplex
     
 
   };
