@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Html from './documentation/Html';
-import Elements from './documentation/Elements';
+import CssDucument from './documentation/CssDucument';
 
 const Navbar = () => {
   const [currentContent, setCurrentContent] = useState(<Html />);
@@ -70,7 +70,7 @@ const Navbar = () => {
           {/* Menu for Desktop */}
           <div className="hidden md:flex space-x-6">
             <button onClick={() => handleMenuClick(<Html />)} className="hover:text-gray-400">HTML</button>
-            <button onClick={() => handleMenuClick(<Elements />)} className="hover:text-gray-400">CSS</button>
+            <button onClick={() => handleMenuClick(<CssDucument />)} className="hover:text-gray-400">CSS</button>
             <button onClick={() => handleMenuClick(<Html />)} className="hover:text-gray-400">BOOTSTRAP</button>
             <button onClick={() => handleMenuClick(<Elements />)} className="hover:text-gray-400">TAILWIND</button>
             <button onClick={() => handleMenuClick(<Html />)} className="hover:text-gray-400">JAVASCRIPT</button>
@@ -99,7 +99,7 @@ const Navbar = () => {
         {menuOpen && (
           <div className="md:hidden mt-4 space-y-2 bg-gray-900 p-4 rounded">
             <button onClick={() => handleMenuClick(<Html />)} className="block w-full px-4 py-2 hover:bg-gray-700">HTML</button>
-            <button onClick={() => handleMenuClick(<Elements />)} className="block w-full px-4 py-2 hover:bg-gray-700">CSS</button>
+            <button onClick={() => handleMenuClick(<CssDucument />)} className="block w-full px-4 py-2 hover:bg-gray-700">CSS</button>
             <button onClick={() => handleMenuClick(<Html />)} className="block w-full px-4 py-2 hover:bg-gray-700">BOOTSTRAP</button>
             <button onClick={() => handleMenuClick('Tailwind Documentation')} className="block w-full px-4 py-2 hover:bg-gray-700">TAILWIND</button>
             <button onClick={() => handleMenuClick('JavaScript Documentation')} className="block w-full px-4 py-2 hover:bg-gray-700">JAVASCRIPT</button>

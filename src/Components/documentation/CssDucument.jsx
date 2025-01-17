@@ -4,6 +4,9 @@ import { baseParagraphClasses } from "../utils/ClassNames";
 import CodeHighlighter from "./CodeHighlighter";
 import CodeExamples from "./CodeExamples";
 import FirstStep from "../CSSDocumention/firstStep";
+import SecondStep from "../CSSDocumention/secondStep";
+import ThirdStep from "../CSSDocumention/thirdStep";
+import FourthStep from "../CSSDocumention/fourthStep";
 
 function Paragraph({ children, type = "question", additionalClasses = "" }) {
   const paragraphClass = clsx(baseParagraphClasses[type], additionalClasses);
@@ -15,9 +18,12 @@ function Elements() {
     
     
   return (
-    <div className="bg-[#101C28] p-6 space-y-4">
+    <div className="space-y-4">
 
       <FirstStep/>
+      <SecondStep/>
+      <ThirdStep/>
+      <FourthStep/>
       
      
       

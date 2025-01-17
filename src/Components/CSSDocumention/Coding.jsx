@@ -181,13 +181,102 @@ const [importantRule] = useState(`p {
   color: red !important; /* This will take precedence */
 }
 `);
+
+const [displayvalue] = useState(`div {
+  display: flex; /* Makes the div a flex container */
+}
+`);
+const [positionproperty] = useState(`div {
+  position: relative;
+  top: 10px; /* Moves 10px downward from its normal position */
+}
+`);
+const [Paddingcode] = useState(`div {
+  padding: 10px; /* Adds 10px space inside the element */
+}
+`);
+const [Margincode] = useState(`div {
+  margin: 15px; /* Adds 15px space outside the element */
+}
+`);
+const [Bordercode] = useState(`div {
+  border: 2px solid black; /* Adds a 2px black solid border */
+}
+`);
+const [flexgrowcode] = useState(`flex-grow: 1; /* The item will take up extra space equally with others that also grow */
+`);
+const [flexshrinkcode] = useState(`flex-shrink: 0; /* The item will not shrink even if there’s not enough space */
+`);
+const [flexbasiscode] = useState(`flex-basis: 50%; /* The item will initially take 50% of the container's width */
+`);
+const [ExampleShorthand] = useState(`.item {
+  flex: 1 0 50%; /* flex-grow: 1, flex-shrink: 0, flex-basis: 50% */
+}
+`);
+const [widthcode] = useState(`width: 200px; /* Element's width is fixed at 200px */
+  `);
+  const [minwidthcode] = useState(`min-width: 150px; /* The element's width cannot shrink below 150px */
+`);
+  const [maxwidthcode] = useState(`max-width: 300px; /* The element's width cannot exceed 300px */
+`);
+  const [ExampleCombined] = useState(`div {
+  width: 50%;
+  min-width: 200px;
+  max-width: 600px;
+}
+/* The element's width is flexible, but it won't shrink below 200px or grow beyond 600px. */
+`);
+const [zindexcode] = useState(`/* Box 1 will appear below Box 2 */
+.box1 {
+  position: relative;
+  z-index: 1;
+  background: red;
+}
+
+.box2 {
+  position: relative;
+  z-index: 2;
+  background: blue;
+}
+`);
+const [opacitycode] = useState(`opacity: 0.5; /* The element is semi-transparent */
+`);
+  const [visibilitycode] = useState(`visibility: hidden; /* The element is hidden but still occupies space */
+`);
+  const [opacityvisibility] = useState(`/* Example for clarity */
+.box1 {
+  opacity: 0; /* Invisible but interactive */
+}
+
+.box2 {
+  visibility: hidden; /* Hidden and non-interactive */
+}
+`);
+const [UseFlexbox] = useState(`display: flex;
+ `);
+ const [UseCSSGrid] = useState(`display: grid;
+`);
+  const [flexBoxcode] = useState(`.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+`);
+    const [CSSgridcode] = useState(`.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+`);
   
 
 
     
   return { basicCode, inlineCode, InternalCode, InlineCSSCode, InternalCSSCode, InlineOne, Inlinetwo, Inlinethree, Content, Padding, Border,Margin, Inlinestyles, Declaration,
     CSSSelectors, ElementSelector, ClassSelector, IDSelector, GroupSelector, DescendantSelector, Targetsdirect, AdjacentSiblin, GeneralSibling, Pseudoclasses, Pseudoelements,
-    CombiningSelectors, hoverCode, nthchild, focusCode, beforeCode, firstline, afterCode, Inheritable, Force, importantRule 
+    CombiningSelectors, hoverCode, nthchild, focusCode, beforeCode, firstline, afterCode, Inheritable, Force, importantRule, displayvalue, positionproperty, Paddingcode, Margincode,
+    Bordercode, flexgrowcode, flexshrinkcode,flexbasiscode, ExampleShorthand, widthcode, minwidthcode,maxwidthcode,ExampleCombined, zindexcode, opacitycode, visibilitycode, opacityvisibility,
+    UseFlexbox, flexBoxcode, UseCSSGrid, CSSgridcode
     
 
   };

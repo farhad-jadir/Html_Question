@@ -12,7 +12,7 @@ function Paragraph({ children, type = "question", additionalClasses = "" }) {
 function firstStep() {
   const { basicCode, inlineCode, InternalCode, InlineCSSCode, InternalCSSCode, InlineOne, Inlinetwo, Inlinethree, Content, Padding, Border, Margin, Inlinestyles, CSSSelectors, Declaration, ElementSelector, ClassSelector, IDSelector, GroupSelector, DescendantSelector, Targetsdirect, AdjacentSiblin, GeneralSibling, CombiningSelectors, Pseudoclasses, Pseudoelements,  hoverCode, nthchild, focusCode, beforeCode, firstline, afterCode, Inheritable, Force, importantRule   } = Coding();
   return (
-    <div className="bg-[#101C28] p-6">
+    <div className="bg-[#101C28] p-2 md:p-6">
        {/* Heading paragraph */}
       <Paragraph type="heading">Step 1: Basic CSS Questions</Paragraph> <br />
       {/* Question - 1 */}
@@ -25,7 +25,7 @@ function firstStep() {
           *CSS controls the visual and layout aspects, such as colors, fonts, spacing, and positioning. <br />
           2. CSS Syntax: CSS rules are made up of selectors and declarations:
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={basicCode} language="html" />
+                         <CodeHighlighter code={basicCode} language="css" />
                       </div>
           *Selector: Targets the HTML elements (e.g., p for paragraphs, #id for specific IDs). <br />
           *Property: The design aspect being styled (e.g., color, font-size). <br />
@@ -106,20 +106,20 @@ function firstStep() {
       Each box in the model has the following layers (from innermost to outermost): <br />
       1. Content: The actual content of the box (e.g., text, images, or other elements).Properties affecting content: width, height, text-align, line-height, etc. Example:
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={Content} language="html" />
+                         <CodeHighlighter code={Content} language="css" />
                       </div>
       2. Padding: The space between the content and the border. It creates an inner cushion around the content. Padding is transparent and can be controlled individually using: *padding-top *padding-right *padding-bottom *padding-left  *Or shorthand padding. Example:
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={Padding} language="html" />
+                         <CodeHighlighter code={Padding} language="css" />
                       </div>
       3. Border: A boundary that wraps around the padding (or content if padding is not set). Borders can have various styles (solid, dashed, none, etc.), widths, and colors. Border properties: *border-width, border-style, border-color *Shorthand: border. Example:
 
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={Border} language="html" />
+                         <CodeHighlighter code={Border} language="css" />
                       </div>
       4. Margin : The space between the element’s border and the surrounding elements. Margins are transparent and create separation between elements. Individual margin control: *margin-top *margin-right *margin-bottom *margin-left *Or shorthand margin. Example:
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={Margin} language="html" />
+                         <CodeHighlighter code={Margin} language="css" />
                       </div>
 
       </Paragraph> <br />
@@ -137,7 +137,7 @@ function firstStep() {
         *Inline styles: 1,0,0,0 *IDs: 0,1,0,0 *Classes/attributes/pseudo-classes: 0,0,1,0 *Elements/pseudo-elements: 0,0,0,1 <br />
         Higher specificity overrides lower specificity. When two rules have the same specificity, the later rule in the CSS file wins. Example:
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={Inlinestyles} language="html" />
+                         <CodeHighlighter code={Inlinestyles} language="css" />
                       </div>
                       The element with id="id" will be blue because ID has the highest specificity. <br />
                       
@@ -152,53 +152,53 @@ function firstStep() {
          1. Selector: The pattern or rule used to target specific HTML elements. <br />
          2. Declaration Block: The styles applied to the selected elements, enclosed in { }. Example:
                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={Declaration} language="html" />
+                         <CodeHighlighter code={Declaration} language="css" />
                       </div>
                       <Paragraph type="para">Common Types of CSS Selectors:</Paragraph>
                       1. Universal Selector (*): <br />
                       *Selects all elements in the document. *Example:
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={CSSSelectors} language="html" />
+                         <CodeHighlighter code={CSSSelectors} language="css" />
                       </div>
                       2. Type Selector (Element Selector): <br />
                       *Targets all instances of a specific HTML element. *Example:
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={ElementSelector} language="html" />
+                         <CodeHighlighter code={ElementSelector} language="css" />
                       </div>
                       3.Class Selector (.classname): <br />
                       *Targets elements with a specific class attribute. *Example:
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={ClassSelector} language="html" />
+                         <CodeHighlighter code={ClassSelector} language="css" />
                       </div>
                       4. ID Selector (#id): <br />
                       *Targets an element with a specific ID attribute. *Example:
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={IDSelector} language="html" />
+                         <CodeHighlighter code={IDSelector} language="css" />
                       </div>
                       5.  Group Selector (,): <br />
                       *Applies the same styles to multiple selectors. *Example:
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={GroupSelector} language="html" />
+                         <CodeHighlighter code={GroupSelector} language="css" />
                       </div>
                       6.  Descendant Selector (ancestor descendant): <br />
                       *Targets elements nested within a specified ancestor.. *Example:
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={DescendantSelector} language="html" />
+                         <CodeHighlighter code={DescendantSelector} language="css" />
                       </div>
                       7.  Child Selector (parent &gt; child): <br />
                       *Targets direct child elements. *Example:
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={Targetsdirect} language="html" />
+                         <CodeHighlighter code={Targetsdirect} language="css" />
                       </div>
                       8.  Adjacent Sibling Selector (element1 + element2): <br />
                       *Targets an element immediately following a specified element. *Example:
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={AdjacentSiblin} language="html" />
+                         <CodeHighlighter code={AdjacentSiblin} language="css" />
                       </div>
                       9.  General Sibling Selector (element1 ~ element2): <br />
                       *Targets all siblings of a specified element. *Example:
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={GeneralSibling} language="html" />
+                         <CodeHighlighter code={GeneralSibling} language="css" />
                       </div>
                       10.  Attribute Selector: <br />
                       *Targets elements based on their attributes. *Example: <br />
@@ -207,16 +207,16 @@ function firstStep() {
                       11.  Pseudo-classes:
                       *Target elements in specific states. *Example:
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={Pseudoclasses} language="html" />
+                         <CodeHighlighter code={Pseudoclasses} language="css" />
                       </div>
                       12.  Pseudo-elements:
                       *Target specific parts of an elemen. *Example:
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={Pseudoelements} language="html" />
+                         <CodeHighlighter code={Pseudoelements} language="css" />
                       </div>
                       Combining Selectors: <br />
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={CombiningSelectors} language="html" />
+                         <CodeHighlighter code={CombiningSelectors} language="css" />
                       </div>
 
 
@@ -231,30 +231,30 @@ function firstStep() {
          Example: <br />
          1. :hover: Styles when an element is hovered.
                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={hoverCode} language="html" />
+                         <CodeHighlighter code={hoverCode} language="css" />
                       </div>
                       2. :nth-child(2): Targets the second child of its parent.
                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={nthchild} language="html" />
+                         <CodeHighlighter code={nthchild} language="css" />
                       </div>
                       3. :focus: Styles when an element gains focus.
                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={focusCode} language="html" />
+                         <CodeHighlighter code={focusCode} language="css" />
                       </div>
                       <Paragraph type="para">Pseudo-elements:</Paragraph>
                         *Target specific parts of an element or add generated content. *Syntax: Double colon :: <br />
                          Example: <br />
                      1. ::before: Adds content before an element.
                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={beforeCode} language="html" />
+                         <CodeHighlighter code={beforeCode} language="css" />
                       </div>
                       2. ::first-line: Styles the first line of text in a block.
                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={firstline} language="html" />
+                         <CodeHighlighter code={firstline} language="css" />
                       </div>
                       3. ::after: Adds content after an element.
                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={afterCode} language="html" />
+                         <CodeHighlighter code={afterCode} language="css" />
                       </div>
                       Key Difference: *Pseudo-classes deal with element states (e.g., :hover, :focus). *Pseudo-elements target specific parts of elements (e.g., ::before, ::first-line).
 
@@ -269,12 +269,12 @@ function firstStep() {
          <Paragraph type="para">Key Points</Paragraph>
          1. Inheritable Properties: *Text-related properties like color, font-family, visibility, line-height, etc. *Example:
                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={Inheritable} language="html" />
+                         <CodeHighlighter code={Inheritable} language="css" />
                       </div>
                       2. Non-inheritable Properties: *Box model and layout properties like margin, padding, border, width, etc. *These must be explicitly defined. <br />
                       3. Force Inheritance: * Use inherit to apply inheritance explicitly, even for non-inheritable properties.
                       <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={Force} language="html" />
+                         <CodeHighlighter code={Force} language="css" />
                       </div>
                       4. Override Inheritance:  *Child elements can override inherited styles by defining their own styles. <br />
                       Inheritance simplifies styling but requires understanding of which properties inherit by default.
@@ -288,7 +288,7 @@ function firstStep() {
          The !important rule overrides all other style declarations, including inline styles and those with higher specificity. It ensures that a particular style is always applied.
          <Paragraph type="para">Syntax:</Paragraph>
                      <div className="  px-0 sm:px-2 md:px-8 rounded-md">
-                         <CodeHighlighter code={importantRule} language="html" />
+                         <CodeHighlighter code={importantRule} language="css" />
                       </div>
                       <Paragraph type="para">When to Use It:</Paragraph>
                       1. To quickly override existing styles that are difficult to change due to specificity or external stylesheets. <br />
