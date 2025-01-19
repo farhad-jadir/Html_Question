@@ -17,7 +17,7 @@ function HtmlInterview() {
     
     
   return (
-    <div className="bg-[#101C28] p-6 space-y-4">
+    <div className="bg-[#101C28] p-2 space-y-4">
       {/* Heading paragraph */}
       <Paragraph type="heading">Step 1: Basic HTML Questions</Paragraph>
       {/* Question - 1 */}

@@ -215,13 +215,208 @@ const [Cdegridcols] = useState(`<div style="display: grid; grid-template-columns
   <div style="background-color: yellow; grid-column: span 2;">Item 4 (spans 2 columns)</div>
 </div>
 `);
+const [ResponsiveGrid] = useState(`<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+  <div class="bg-blue-500 p-4">Item 1</div>
+  <div class="bg-blue-500 p-4">Item 2</div>
+  <div class="bg-blue-500 p-4">Item 3</div>
+  <div class="bg-blue-500 p-4">Item 4</div>
+</div>
+`);
+const [ResponsiveFlexbox] = useState(`<div class="flex flex-col md:flex-row gap-4">
+  <div class="bg-green-500 p-4">Item 1</div>
+  <div class="bg-green-500 p-4">Item 2</div>
+  <div class="bg-green-500 p-4">Item 3</div>
+</div>
+`);
+const [ResponsiveText] = useState(`<p class="text-sm md:text-lg lg:text-xl">
+  Responsive text adjusts size based on screen width.
+</p>
+`);
+const [ResponsiveVisibility] = useState(`<div class="hidden md:block">Visible on medium and larger screens</div>
+<div class="block md:hidden">Visible on small screens only</div>
+`);
+const [textcenter] = useState(`<div class="text-center">Centered Text</div>
+`);
+  const [CenterHorizontally] = useState(`<div class="w-1/2 mx-auto bg-gray-300">Centered Block</div>
+`);
+    const [Flexboxcenter] = useState(`<div class="flex justify-center items-center h-screen bg-gray-200">
+  <div class="bg-blue-500 p-4">Centered Box</div>
+</div>
+`);
+      const [FlexboxAxis] = useState(`<div class="flex items-center h-64 bg-gray-200">
+  <div class="bg-green-500 p-4">Vertically Centered</div>
+</div>
+`);
+        const [AbsolutePosition] = useState(`<div class="relative h-screen">
+  <div class="absolute inset-0 m-auto w-32 h-32 bg-red-500">Centered</div>
+</div>
+`);
+          const [absolutetranslate] = useState(`<div class="relative h-screen">
+  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-yellow-500 p-4">Centered</div>
+</div>
+`);
+            const [bothhorizontally] = useState(`<div class="grid place-items-center h-screen bg-gray-200">
+  <div class="bg-purple-500 p-4">Centered</div>
+</div>
+`);
+const [CustomizablePadding] = useState(`<div class="container mx-auto px-4">
+  <h1 class="text-2xl">This is a responsive container</h1>
+</div>
+`);
+const [breakpointt] = useState(`<div class="text-sm sm:text-base md:text-lg lg:text-xl">
+  Responsive Text
+</div>
+`);
+const [ positioning] = useState(`<div class="fixed top-0 left-0 w-full bg-gray-800 text-white p-4">
+  Fixed Header
+</div>
+`);
+const [usesticky] = useState(`<div class="sticky top-0 bg-gray-800 text-white p-4">
+  Sticky Header
+</div>
+`);
+const [SmallScreens] = useState(`<div class="block md:hidden">
+  Visible on screens < 768px
+</div>
+`);
+const [mobilescreens] = useState(`<div class="text-sm md:text-lg lg:text-xl">
+  Responsive Text
+</div>
+`);
+const [AddingCustom] = useState(`module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          light: '#3AB0FF',
+          DEFAULT: '#007BFF',
+          dark: '#0056b3',
+        },
+      },
+      spacing: {
+        '72': '18rem',
+        '84': '21rem',
+        '96': '24rem',
+      },
+    },
+  },
+};
+`);
+const [CustomUtilities] = useState(`module.exports = {
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.text-shadow': {
+          textShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)',
+        },
+      });
+    },
+  ],
+};
+`);
+const [reusableclasses] = useState(`module.exports = {
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.text-shadow': {
+          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+        },
+      });
+    },
+  ],
+};
+`);
+const [InstallationExample] = useState(`npm install @tailwindcss/typography
+`);
+const [InstallationExampleto] = useState(`module.exports = {
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
+};
+`);
+const [InstallSASS] = useState(`npm install sass
+  `);
+  const [ImportTailwind] = useState(`@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Example SASS styles
+.custom-class {
+  @apply bg-blue-500 text-white;
+  padding: 1rem;
+
+  &:hover {
+    @apply bg-blue-700;
+  }
+}
+`);
+    const [InstallSASSs] = useState(`npm install postcss postcss-cli autoprefixer tailwindcss
+`);
+      const [Createpostcss] = useState(`module.exports = {
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ],
+};
+`);
+        const [Addstyles] = useState(`@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-class {
+  @apply bg-green-500 text-white p-4;
+}
+`);
+const [ConfigureDark] = useState(`module.exports = {
+  darkMode: 'class', // Use 'media' for system preference-based dark mode
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+`);
+const [Adddark] = useState(`<div class="bg-white text-black dark:bg-black dark:text-white">
+  Dark Mode Example
+</div>
+  `);
+  const [classmode] = useState(`document.documentElement.classList.add('dark');
+`);
+    const [thedark] = useState(`<html class="dark">
+  <body class="bg-white dark:bg-gray-900">
+    <p class="text-black dark:text-white">This text changes color in dark mode.</p>
+  </body>
+</html>
+`);
+const [BuildPostCSS] = useState(`npx postcss input.css -o output.css
+        `);
+        const [contentOption] = useState(`module.exports = {
+  content: ['./src/**/*.{html,js,jsx,ts,tsx}'], // Path to your files
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+`);
+const [BuildProduction] = useState(`npm run build
+`);
+const [Tailwindremove] = useState(`module.exports = {
+  content: ['./src/**/*.{html,js}'], // Scan all HTML and JS files
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+`);
         
 
     
   return { basicCode, InstallTailwind, UsingCDN, Tailwindinstall, Linkit, utilityclasses, benefitsTailwind, WithJIT, Themes, PurgeContent, Extendingcolor,Withoutapply, Withapply, Witthapply, Breakpoints,
     ExtendPalette, OverrideColors, UsageColors, Allsides, Specificsides, flexCod, flexRow, justifyCod, itemsCod, gapCod, ExamCod, FontSize, FontWeigh, TextColor, TextAlignment, LineHeight, TextTransform,
     LetterSpacing, ExampleCodetow, bgCode, bgOpacityCode, bgcoverCode, bgcenterCode, texttCode, ringCode, borderCode, Examplethre, hoverCode, focusCode, activeCode, focusWithin, disabledCode, Examplefour,
-    AddCustom, FontFamily, controllingfont, fontutilities, Examplefive, Examplesix, gridCde, gridcolsCde, gridrowsCde, Cdegap, colspanCde, TailwindgridCde, CSSgridCde, Cdegridcols
+    AddCustom, FontFamily, controllingfont, fontutilities, Examplefive, Examplesix, gridCde, gridcolsCde, gridrowsCde, Cdegap, colspanCde, TailwindgridCde, CSSgridCde, Cdegridcols, ResponsiveGrid, ResponsiveFlexbox,
+    ResponsiveText, ResponsiveVisibility, textcenter, CenterHorizontally, Flexboxcenter, FlexboxAxis, AbsolutePosition, absolutetranslate, bothhorizontally, CustomizablePadding, breakpointt,  positioning, usesticky,
+    SmallScreens, mobilescreens, AddingCustom, CustomUtilities, reusableclasses, InstallationExample, InstallationExampleto, InstallSASS, ImportTailwind, InstallSASSs, Createpostcss, Addstyles, BuildPostCSS,
+    ConfigureDark, Adddark, classmode, thedark, contentOption, BuildProduction, Tailwindremove
     
 
   };

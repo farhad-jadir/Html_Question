@@ -13,7 +13,7 @@ function CommonlyUsed() {
   const { Allsides, Specificsides, flexCod, flexRow, justifyCod, itemsCod, gapCod, ExamCod, FontSize, FontWeigh, TextColor, TextAlignment, LineHeight, TextTransform,
     LetterSpacing, ExampleCodetow, bgCode, bgOpacityCode, bgcoverCode, bgcenterCode, texttCode, ringCode, borderCode, Examplethre, hoverCode, focusCode, activeCode, focusWithin, disabledCode, Examplefour, AddCustom, FontFamily, controllingfont, fontutilities, Examplefive, Examplesix, gridCde, gridcolsCde, gridrowsCde, Cdegap, colspanCde, TailwindgridCde, CSSgridCde, Cdegridcols } = TailCoding();
   return (
-    <div className="bg-[#101C28] p-6">
+    <div className="bg-[#101C28] p-2">
 
         <Paragraph type="heading">Step 2: Commonly Used Tailwind Utilities  </Paragraph> <br />
 

@@ -12,7 +12,7 @@ function Paragraph({ children, type = "question", additionalClasses = "" }) {
 function fourthStep() {
   const { universalselector, Fileextension, fextension, CustomProperties, DefineKeyframes, ApplyAnimation, KeyFeatures, KeyFeaturesss, PathsComplex } = Coding();
   return (
-    <div className="bg-[#101C28] p-6">
+    <div className="bg-[#101C28] p-2">
 
         <Paragraph type="heading">Step 4: Advanced CSS Questions  </Paragraph> <br />
 

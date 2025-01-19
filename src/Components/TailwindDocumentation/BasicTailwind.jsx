@@ -12,7 +12,7 @@ function Paragraph({ children, type = "question", additionalClasses = "" }) {
 function BasicTailwind() {
   const { InstallTailwind, UsingCDN, Tailwindinstall, Linkit, utilityclasses, benefitsTailwind, WithJIT, Themes, PurgeContent, Extendingcolor, Withoutapply, Withapply, Witthapply, Breakpoints, ExtendPalette, OverrideColors, UsageColors } = TailCoding();
   return (
-    <div className="bg-[#101C28] p-6">
+    <div className="bg-[#101C28] p-2">
 
         <Paragraph type="heading">Step 1: Basic Tailwind CSS Questions  </Paragraph> <br />
 
