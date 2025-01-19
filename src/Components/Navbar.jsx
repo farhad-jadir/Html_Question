@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import Html from './documentation/Html';
 import CssDucument from './documentation/CssDucument';
+import TailwindCSS from './documentation/TailwindCSS';
+import BotStrap from './documentation/BotStrap';
+import JavaScript from './documentation/JavaScript';
+import AdvanceJavaScript from './documentation/AdvanceJavaScript';
+import ReactJs from './documentation/ReactJs';
 
 const Navbar = () => {
   const [currentContent, setCurrentContent] = useState(<Html />);
@@ -71,10 +76,11 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-6">
             <button onClick={() => handleMenuClick(<Html />)} className="hover:text-gray-400">HTML</button>
             <button onClick={() => handleMenuClick(<CssDucument />)} className="hover:text-gray-400">CSS</button>
-            <button onClick={() => handleMenuClick(<Html />)} className="hover:text-gray-400">BOOTSTRAP</button>
-            <button onClick={() => handleMenuClick(<Elements />)} className="hover:text-gray-400">TAILWIND</button>
-            <button onClick={() => handleMenuClick(<Html />)} className="hover:text-gray-400">JAVASCRIPT</button>
-            <button onClick={() => handleMenuClick('React Documentation')} className="hover:text-gray-400">REACT</button>
+            <button onClick={() => handleMenuClick(<TailwindCSS />)} className="hover:text-gray-400">TAILWIND CSS</button>
+            <button onClick={() => handleMenuClick(<BotStrap />)} className="hover:text-gray-400">BOOTSTRAP</button>
+            <button onClick={() => handleMenuClick(<JavaScript />)} className="hover:text-gray-400">JAVASCRIPT</button>
+            <button onClick={() => handleMenuClick(<AdvanceJavaScript />)} className="hover:text-gray-400">ADVANCE JAVASCRIPT</button>
+            <button onClick={() => handleMenuClick(<ReactJs/>)} className="hover:text-gray-400">REACT JS</button>
 
             {/* Search Option */}
             <form onSubmit={handleSearch} className="flex">
@@ -100,10 +106,11 @@ const Navbar = () => {
           <div className="md:hidden mt-4 space-y-2 bg-gray-900 p-4 rounded">
             <button onClick={() => handleMenuClick(<Html />)} className="block w-full px-4 py-2 hover:bg-gray-700">HTML</button>
             <button onClick={() => handleMenuClick(<CssDucument />)} className="block w-full px-4 py-2 hover:bg-gray-700">CSS</button>
-            <button onClick={() => handleMenuClick(<Html />)} className="block w-full px-4 py-2 hover:bg-gray-700">BOOTSTRAP</button>
-            <button onClick={() => handleMenuClick('Tailwind Documentation')} className="block w-full px-4 py-2 hover:bg-gray-700">TAILWIND</button>
-            <button onClick={() => handleMenuClick('JavaScript Documentation')} className="block w-full px-4 py-2 hover:bg-gray-700">JAVASCRIPT</button>
-            <button onClick={() => handleMenuClick('React Documentation')} className="block w-full px-4 py-2 hover:bg-gray-700">REACT</button>
+            <button onClick={() => handleMenuClick(<TailwindCSS />)} className="block w-full px-4 py-2 hover:bg-gray-700">TAILWIND CSS</button>
+            <button onClick={() => handleMenuClick(<BotStrap/>)} className="block w-full px-4 py-2 hover:bg-gray-700">BOOTSTRAP</button>
+            <button onClick={() => handleMenuClick(<JavaScript/>)} className="block w-full px-4 py-2 hover:bg-gray-700">JAVASCRIPT</button>
+            <button onClick={() => handleMenuClick(<AdvanceJavaScript/>)} className="block w-full px-4 py-2 hover:bg-gray-700">ADVANCE JAVASCRIPT</button>
+            <button onClick={() => handleMenuClick(<ReactJs/>)} className="block w-full px-4 py-2 hover:bg-gray-700">REACT JS</button>
 
             {/* Search Option for Mobile */}
             <form onSubmit={handleSearch} className="flex mt-4">
