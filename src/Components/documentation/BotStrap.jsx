@@ -3,10 +3,10 @@ import clsx from "clsx";
 import { baseParagraphClasses } from "../utils/ClassNames";
 import CodeHighlighter from "./CodeHighlighter";
 import CodeExamples from "./CodeExamples";
-import FirstStep from "../CSSDocumention/firstStep";
-import SecondStep from "../CSSDocumention/secondStep";
-import ThirdStep from "../CSSDocumention/thirdStep";
-import FourthStep from "../CSSDocumention/fourthStep";
+import BasicBootstrap from "../BootstrapDocumentation/BasicBootstrap";
+import CommonlyUsedBootstrap from "../BootstrapDocumentation/CommonlyUsedBootstrap";
+import BootstrapLayout from "../BootstrapDocumentation/BootstrapLayout";
+import AdvancedBootstrap from "../BootstrapDocumentation/AdvancedBootstrap";
 
 function Paragraph({ children, type = "question", additionalClasses = "" }) {
   const paragraphClass = clsx(baseParagraphClasses[type], additionalClasses);
@@ -20,10 +20,10 @@ function BotStrap() {
   return (
     <div className="space-y-4">
 
-      <FirstStep/>
-      <SecondStep/>
-      <ThirdStep/>
-      <FourthStep/>
+      <BasicBootstrap/>
+      <CommonlyUsedBootstrap/>
+      <BootstrapLayout/>
+      <AdvancedBootstrap/>
       
      
       
