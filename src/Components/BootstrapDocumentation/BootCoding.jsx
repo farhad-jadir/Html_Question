@@ -108,11 +108,185 @@ const [buttonsdifferently] = useState(`<button class="btn btn-primary">Primary B
 `);
   const [ButtonSizes] = useState(`<button class="btn btn-outline-primary">Outline Button</button>
 `);
+const [DismissibleAlerts] = useState(`<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    Warning! Something went wrong.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+`);
+  const [Animations] = useState(`<div class="alert alert-info" role="alert">
+   For more information, visit <a href="#" class="alert-link">this link</a>.
+</div>
+`);
+const [BasicUsage] = useState(`<div class="alert alert-success" role="alert">
+    This is a success alert!
+</div>
+`);
+const [Dropdownclass] = useState(`<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Dropdown button
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+</div>
+`);
+const [Dropend] = useState(`<div class="dropdown">
+   <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+       Right-Aligned Dropdown
+   </button>
+   <ul class="dropdown-menu dropdown-menu-end">
+       <li><a class="dropdown-item" href="#">Option 1</a></li>
+       <li><a class="dropdown-item" href="#">Option 2</a></li>
+   </ul>
+</div>
+`);
+const [CreatingForms] = useState(`<form>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+`);
+const [InlineForm] = useState(`<form class="d-flex">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+`);
+const [FlexboxGrid] = useState(`<div class="container">
+    <div class="row">
+        <div class="col-md-6">Column 1</div>
+        <div class="col-md-6">Column 2</div>
+    </div>
+</div>
+`);
+const [CSSGrid] = useState(`<div class="d-grid gap-3">
+    <div class="p-3 bg-primary text-white">Item 1</div>
+    <div class="p-3 bg-secondary text-white">Item 2</div>
+    <div class="p-3 bg-success text-white">Item 3</div>
+</div>
+`);
+const [FlexboxUtilities] = useState(`<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">Centered</div>
+`);
+const [GridSystem] = useState(`<div class="row justify-content-center align-items-center" style="height: 100vh;">
+  <div class="col-auto">Centered</div>
+</div>
+`);
+const [TextAlignment] = useState(`<div class="text-center">Centered text</div>
+`);
+const [MarginAuto] = useState(`<div class="d-flex m-auto" style="height: 100vh;">Centered</div>
+`);
+const [quickstyling] = useState(`<div class="p-3 bg-primary text-white text-center">Quickly styled element</div>
+`);
+const [ClassStructure] = useState(`{property}-{side}-{size}
+`);
+const [justifycontent] = useState(`<div class="d-flex justify-content-center">
+  <div>Item 1</div>
+  <div>Item 2</div>
+</div>
+`);
+const [BootstrapSource] = useState(`npm install bootstrap
+`);
+  const [SourceFiles] = useState(`// Import Bootstrap functions and variables
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+// Override variables here
+$primary: #ff5722;
+$font-size-base: 1.2rem;
+
+// Import rest of Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+`);
+const [CompileSASS] = useState(`sass custom.scss custom.css
+`);
+const [ModifyVariables] = useState(`@brand-primary: #ff5722;
+@body-bg: #f8f9fa;
+`);
+const [CompileLESS] = useState(`lessc custom.less custom.css
+`);
+const [Triggers] = useState(`<button data-bs-toggle="modal" data-bs-target="#myModal">Open Modal</button>
+`);
+const [carouselitem] = useState(`<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="image1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="image2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="image3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+`);
+const [textlight] = useState(`<body class="bg-dark text-light">
+  <!-- Content goes here -->
+</body>
+`);
+const [dynamicallytoggle] = useState(`<button id="themeToggle" class="btn btn-secondary">Toggle Theme</button>
+
+<script>
+  document.getElementById('themeToggle').addEventListener('click', function() {
+    document.body.classList.toggle('bg-dark');
+    document.body.classList.toggle('text-light');
+  });
+</script>
+ `);
+const [togglethemes] = useState(`<body class="bg-dark text-light">
+  <h1>Dark Theme</h1>
+  <p>This is a dark-themed page.</p>
+</body>
+`);
+const [Overriding] = useState(`<link href="bootstrap.min.css" rel="stylesheet">
+<link href="custom.css" rel="stylesheet">
+`);
+  const [Specificity] = useState(`/* Override Bootstrap's default button color */
+.btn-primary {
+  background-color: #ff5722;
+  border-color: #ff5722;
+}
+`);
+const [Useimportant] = useState(`.btn-primary {
+  background-color: #ff5722 !important;
+}
+`);
+const [importingBootstrap] = useState(`$primary: #ff5722;  // Custom primary color
+@import "bootstrap";
+`);
+const [Examplec] = useState(`<link href="bootstrap.min.css" rel="stylesheet">
+<link href="custom.css" rel="stylesheet">
+
+<!-- Custom styles in custom.css -->
+<style>
+  .btn-primary {
+    background-color: #ff5722;
+  }
+</style>
+`);
+
+
 
 
 
     
-  return { IncludeBootstrap, DownloadingFiles, PackageManager, Importit, UsingBootstrap, Gridsystem, containerfluid, Customwritten, CustomCSS, Bootstrapensures, BreakpointsBootstrap, NavbarLink, ButtonsLink, CardsLink, AlertsLink, ModalsLink, FormsLink, NavigationBar, BasicStructure, Modalcomponent, buttonsdifferently, Largebutton,ButtonSizes 
+  return { IncludeBootstrap, DownloadingFiles, PackageManager, Importit, UsingBootstrap, Gridsystem, containerfluid, Customwritten, CustomCSS, Bootstrapensures, BreakpointsBootstrap, NavbarLink, ButtonsLink, CardsLink, AlertsLink, ModalsLink, FormsLink, NavigationBar, BasicStructure, Modalcomponent, buttonsdifferently, Largebutton,ButtonSizes, DismissibleAlerts, Animations, BasicUsage, Dropdownclass, Dropend, CreatingForms, InlineForm, FlexboxGrid, CSSGrid, FlexboxUtilities, GridSystem, TextAlignment, MarginAuto, quickstyling, ClassStructure, justifycontent, BootstrapSource, SourceFiles, CompileSASS, ModifyVariables, CompileLESS, Triggers, carouselitem, textlight, dynamicallytoggle, togglethemes, Overriding, Specificity, Useimportant, importingBootstrap, Examplec
     
 
   };

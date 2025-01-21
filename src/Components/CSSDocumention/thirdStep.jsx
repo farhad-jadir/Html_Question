@@ -106,7 +106,7 @@ function thirdStep() {
                 This ensures your layout adapts to different screen sizes.
 
 
-      </Paragraph>
+      </Paragraph> <br />
 
        {/* Question - 18 */}
        <Paragraph>18. How do you create a centered element in CSS? Provide multiple ways. </Paragraph>

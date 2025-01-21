@@ -10,7 +10,7 @@ function Paragraph({ children, type = "question", additionalClasses = "" }) {
 }
 
 function CommonlyUsedBootstrap() {
-  const {NavigationBar, BasicStructure, Modalcomponent, buttonsdifferently, Largebutton,ButtonSizes   } = BootCoding();
+  const {NavigationBar, BasicStructure, Modalcomponent, buttonsdifferently, Largebutton,ButtonSizes, DismissibleAlerts, Animations, BasicUsage, Dropdownclass, Dropend, CreatingForms, InlineForm   } = BootCoding();
   return (
     <div className="bg-[#101C28] p-2">
 
@@ -78,7 +78,9 @@ function CommonlyUsedBootstrap() {
                 <li>Closing the Modal: You can close the modal by clicking the close button (data-bs-dismiss="modal") or the background area outside the modal.</li>
             </ul>
             Example: When the "Launch Modal" button is clicked, the modal with content will appear. You can close it by clicking the "Close" button or anywhere outside the modal.
-        </Paragraph>
+        </Paragraph> <br />
+
+      
         {/* {/* Question 12 */}
 
         <Paragraph>12. What is the purpose of the btn class in Bootstrap, and how do you style buttons differently using Bootstrap? </Paragraph>
@@ -123,6 +125,122 @@ function CommonlyUsedBootstrap() {
                   <CodeHighlighter code={ButtonSizes} language="html" />
                 </div>
                 These classes allow you to easily customize the button’s color, size, and style to fit your design needs.
+        </Paragraph> <br />
+
+        {/* {/* Question 13 */}
+
+        <Paragraph>13. How does the alert component work in Bootstrap, and what are some of its variations? </Paragraph>
+        <Paragraph type="answer">
+                The alert component in Bootstrap is used to display feedback messages or notifications. It provides contextual styling and dismissible functionality for a variety of alert types.
+                <Paragraph type="para">Key Features:</Paragraph>
+                1. Basic Usage: Alerts are created using the .alert class, combined with contextual classes like .alert-primary, .alert-success, .alert-danger, etc.
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                  <CodeHighlighter code={BasicUsage} language="html" />
+                </div>
+                2. Dismissible Alerts: Add the .alert-dismissible class and include a close button (&LT;button&GT; with data-bs-dismiss="alert") to allow users to close the alert.
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                  <CodeHighlighter code={DismissibleAlerts} language="html" />
+                </div>
+                <Paragraph type="para">Variations:</Paragraph>
+                i. Colors: Different classes for different contexts:
+                <ul className="px-4 list-disc list-inside">
+                <li>..alert-primary (Info)</li>
+                <li>..alert-secondary (Neutral)</li>
+                <li>..alert-success (Success)</li>
+                <li>.alert-danger (Error)</li>
+                <li>.alert-warning (Warning)</li>
+                <li>.alert-info (Information)</li>
+                <li>.alert-light (Subtle)</li>
+                <li>.alert-dark (Dark theme)</li>
+            </ul>
+            ii. Additional Content: Supports headings, paragraphs, and inline HTML for detailed messages. <br />
+            iii. Link Styling: Use .alert-link to style links within alerts. <br />
+            4. Animations: Include the fade and show classes for smooth transitions when showing or dismissing alerts.
+            <Paragraph type="para">Example of Alert with Links:</Paragraph>
+            <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                  <CodeHighlighter code={Animations} language="html" />
+                </div>
+        </Paragraph> <br />
+
+        {/* {/* Question 14 */}
+
+        <Paragraph>14. What are dropdowns in Bootstrap, and how do they work? </Paragraph>
+        <Paragraph type="answer">
+               Dropdowns in Bootstrap are interactive components that allow users to toggle a menu of items or options. They are typically triggered by a button or link.
+               <Paragraph type="para">How Dropdowns Work:</Paragraph>
+               1. Basic Structure:
+               <ul className="px-4 list-disc list-inside">
+                <li>Use the .dropdown class for the container.</li>
+                <li>Add a trigger element (e.g., a button) with the data-bs-toggle="dropdown" attribute.</li>
+                <li>Include the menu items within a .dropdown-menu container.</li>
+            </ul>
+            <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                  <CodeHighlighter code={Dropdownclass} language="html" />
+                </div>
+                2. Trigger Types:
+               <ul className="px-4 list-disc list-inside">
+                <li>Button or link elements can act as triggers.</li>
+                <li>Add dropdown-toggle to the trigger for styling.</li>
+            </ul>
+            3.Menu Items:
+               <ul className="px-4 list-disc list-inside">
+                <li>Use .dropdown-item for individual menu links or actions.</li>
+                <li>Dividers can be added with &lt;hr class="dropdown-divider"&gt;.
+                </li>
+            </ul>
+            4. Positioning:
+               <ul className="px-4 list-disc list-inside">
+                <li>The dropdown menu aligns by default below the trigger.</li>
+                <li>Use classes like .dropup, .dropend, and .dropstart to change the direction.</li>
+            </ul>
+            5. Interactive Features:
+               <ul className="px-4 list-disc list-inside">
+                <li>Dropdowns rely on JavaScript for toggling and require Bootstrap’s JavaScript bundle.</li>
+            </ul>
+            <Paragraph type="para">Example of a Right-Aligned Dropdown:</Paragraph>
+            <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                  <CodeHighlighter code={Dropend} language="html" />
+                </div>
+
+
+        </Paragraph> <br />
+
+         {/* {/* Question 15 */}
+
+         <Paragraph>15. How do you create forms in Bootstrap, and what are the advantages of using form groups?</Paragraph>
+        <Paragraph type="answer">
+                <Paragraph type="para">Creating Forms in Bootstrap:</Paragraph>
+                  Bootstrap provides a responsive and styled framework for creating forms. Forms are created using the &lt;form&gt; element along with Bootstrap classes for inputs, labels, buttons, and layout. <br />
+                  Basic Form Example:
+                <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                  <CodeHighlighter code={CreatingForms} language="html" />
+                </div>
+                <Paragraph type="para">Advantages of Using Form Groups:</Paragraph>
+                1. Structured Layout:
+               <ul className="px-4 list-disc list-inside">
+                <li>Form groups, created using the .mb-3 or .form-group class, group related inputs with labels and help text, ensuring a clean and organized structure.</li>
+            </ul>
+            2. Consistent Spacing:
+               <ul className="px-4 list-disc list-inside">
+                <li>Classes like .mb-3 add consistent margin between form elements, improving visual spacing.</li>
+            </ul>
+            3. Responsive Design:
+               <ul className="px-4 list-disc list-inside">
+                <li>Form groups adapt well to different screen sizes, ensuring a mobile-friendly layout.</li>
+            </ul>
+            4. Styling Labels and Inputs:
+               <ul className="px-4 list-disc list-inside">
+                <li>Automatically aligns labels and inputs for a professional look.</li>
+            </ul>
+            5. Easy Validation:
+               <ul className="px-4 list-disc list-inside">
+                <li>Works seamlessly with Bootstrap's form validation classes (e.g., .is-invalid, .is-valid).</li>
+            </ul>
+            <Paragraph type="para">Inline Form Example:</Paragraph>
+            <div className="  px-0 sm:px-2 md:px-8 rounded-md">
+                  <CodeHighlighter code={InlineForm} language="html" />
+                </div>
+          
         </Paragraph>
         
       
