@@ -3,10 +3,11 @@ import clsx from "clsx";
 import { baseParagraphClasses } from "../utils/ClassNames";
 import CodeHighlighter from "./CodeHighlighter";
 import CodeExamples from "./CodeExamples";
-import FirstStep from "../CSSDocumention/firstStep";
-import SecondStep from "../CSSDocumention/secondStep";
-import ThirdStep from "../CSSDocumention/thirdStep";
-import FourthStep from "../CSSDocumention/fourthStep";
+import JavaScriptFundamentals from "../JavascriptDocumentation/JavaScriptFundamentals";
+import Functions from "../JavascriptDocumentation/Functions";
+import ArraysandStrings from "../JavascriptDocumentation/ArraysandStrings";
+import Control from "../JavascriptDocumentation/Control";
+import Miscellaneous from "../JavascriptDocumentation/Miscellaneous";
 
 function Paragraph({ children, type = "question", additionalClasses = "" }) {
   const paragraphClass = clsx(baseParagraphClasses[type], additionalClasses);
@@ -20,10 +21,11 @@ function JavaScript() {
   return (
     <div className="space-y-4">
 
-      <FirstStep/>
-      <SecondStep/>
-      <ThirdStep/>
-      <FourthStep/>
+      <JavaScriptFundamentals/>
+      <Functions/>
+      <ArraysandStrings/>
+      <Control/>
+      <Miscellaneous/>
       
      
       
