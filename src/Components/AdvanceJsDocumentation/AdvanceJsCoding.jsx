@@ -253,13 +253,215 @@ fetchAsyncData();
   }
 }
 `);
+const [AccessElements] = useState(`document.getElementById("id");
+document.querySelector(".class");
+document.querySelectorAll("tag");
+`);
+const [ModifyContent] = useState(`const element = document.getElementById("myElement");
+element.textContent = "New Text"; // Change text
+element.setAttribute("class", "new-class"); // Set attributes
+`);
+const [ChangeStyles] = useState(`element.style.color = "red";
+element.style.backgroundColor = "blue";
+`);
+const [AddorRemoveElements] = useState(`const newElement = document.createElement("div");
+newElement.textContent = "Hello!";
+document.body.appendChild(newElement); // Add to DOM
+
+newElement.remove(); // Remove from DOM
+`);
+const [HandleEvents] = useState(`const button = document.getElementById("myButton");
+button.addEventListener("click", () => {
+  alert("Button clicked!");
+});
+`);
+const [getElementById] = useState(`const element = document.getElementById("myDiv");
+`);
+const [querySelector] = useState(`const element = document.querySelector(".myClass"); // Selects the first element with class "myClass"
+`);
+const [querySelectorAll] = useState(`const elements = document.querySelectorAll("div"); // Selects all <div> elements
+elements.forEach((el) => console.log(el)); // Iterate through NodeList
+`);
+const [HTMLCode] = useState(`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Div Color</title>
+  <style>
+    #colorDiv {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      margin: 20px auto;
+    }
+    button {
+      display: block;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="colorDiv"></div>
+  <button id="changeColorButton">Change Color</button>
+  <script src="script.js"></script>
+</body>
+</html>
+`);
+const [JavaScriptCode] = useState(`// Select elements
+const colorDiv = document.getElementById("colorDiv");
+const button = document.querySelector("#changeColorButton");
+
+// Add event listener to button
+button.addEventListener("click", () => {
+  // Change div color randomly
+  const randomColor = \`#\${Math.floor(Math.random() * 16777215).toString(16)}\`;
+  colorDiv.style.backgroundColor = randomColor;
+});
+`);
+const [addEventListenerCode] = useState(`element.addEventListener(event, callback, options);
+`);
+const [ExampleClickEvent] = useState(`// Select a button element
+const button = document.querySelector("#myButton");
+
+// Add a click event listener
+button.addEventListener("click", () => {
+  console.log("Button clicked!");
+});
+`);
+const [MultipleListeners] = useState(`button.addEventListener("click", () => console.log("First listener"));
+button.addEventListener("click", () => console.log("Second listener"));
+`);
+const [SupportsEventOptions] = useState(`button.addEventListener("click", () => console.log("Clicked!"), { once: true });
+`);
+const [EventDelegation] = useState(`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Delegation</title>
+</head>
+<body>
+  <ul id="itemList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
+`);
+const [JavaScriptDelegation] = useState(`// Select the parent element
+const list = document.getElementById("itemList");
+
+// Use event delegation
+list.addEventListener("click", (event) => {
+  if (event.target.tagName === "LI") { // Check if the clicked element is a list item
+    console.log(\`You clicked: \${event.target.textContent}\`);
+  }
+});
+`);
+const [ExampleDynamicAddition] = useState(`const newItem = document.createElement("li");
+newItem.textContent = "Item 4";
+list.appendChild(newItem); // No extra event listener needed!
+`);
+const [innerHTM] = useState(`const div = document.getElementById("myDiv");
+div.innerHTML = "<strong>Hello</strong>";
+console.log(div.innerHTML); // "<strong>Hello</strong>"
+`);
+const [textContent] = useState(`const div = document.getElementById("myDiv");
+div.textContent = "<strong>Hello</strong>";
+console.log(div.textContent); // "<strong>Hello</strong>"
+`);
+const [innerTexts] = useState(`const div = document.getElementById("myDiv");
+div.innerText = "<strong>Hello</strong>";
+console.log(div.innerText); // "<strong>Hello</strong>"
+`);
+const [UsingstyleProperty] = useState(`const element = document.getElementById("myDiv");
+element.style.color = "red"; // Sets the text color to red
+element.style.backgroundColor = "yellow"; // Sets the background color to yellow
+`);
+const [UsingclassList] = useState(`const element = document.getElementById("myDiv");
+element.classList.add("highlight"); // Adds the 'highlight' class
+element.classList.remove("highlight"); // Removes the 'highlight' class
+element.classList.toggle("highlight"); // Toggles the 'highlight' class
+`);
+const [CSSExample] = useState(`.highlight {
+  color: blue;
+  background-color: lightgray;
+}
+`);
+const [UsingsetAttribute] = useState(`const element = document.getElementById("myDiv");
+element.setAttribute("style", "color: green; font-size: 20px;");
+`);
+const [parentNode] = useState(`const child = document.getElementById("child");
+console.log(child.parentNode); // Logs the parent element
+`);
+const [firstChild] = useState(`const parent = document.getElementById("parent");
+console.log(parent.firstChild); // Logs the first child node
+`);
+const [lastChild] = useState(`const parent = document.getElementById("parent");
+console.log(parent.lastChild); // Logs the last child node
+`);
+const [nextSibling] = useState(`const current = document.getElementById("current");
+console.log(current.nextSibling); // Logs the next sibling node
+`);
+const [previousSibling] = useState(`const current = document.getElementById("current");
+console.log(current.previousSibling); // Logs the previous sibling node
+`);
+const [children] = useState(`const parent = document.getElementById("parent");
+console.log(parent.children); // Logs all child elements
+`);
+const [firstElementChild] = useState(`const parent = document.getElementById("parent");
+console.log(parent.firstElementChild); // Logs the first child element
+console.log(parent.lastElementChild);  // Logs the last child element
+`);
+const [nextElementSibling] = useState(`const current = document.getElementById("current");
+console.log(current.nextElementSibling); // Logs the next sibling element
+console.log(current.previousElementSibling); // Logs the previous sibling element
+`);
+const [ExampleSibling] = useState(`<div id="parent">
+  <p id="child1">First child</p>
+  <p id="child2">Second child</p>
+</div>
+`);
+const [JavaScriptSibling] = useState(`const parent = document.getElementById("parent");
+console.log(parent.firstElementChild); // Logs <p id="child1">First child</p>
+console.log(parent.lastElementChild);  // Logs <p id="child2">Second child</p>
+`);
+const [preventDefault] = useState(`const form = document.querySelector("form");
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // Prevents form submission
+  console.log("Form submission prevented!");
+});
+`);
+const [stopPropagation] = useState(`const child = document.getElementById("child");
+child.addEventListener("click", (event) => {
+  event.stopPropagation(); // Stops the event from bubbling
+  console.log("Child clicked!");
+});
+`);
+const [PreventsSubmission] = useState(`<form id="myForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+  <button type="submit">Submit</button>
+</form>
+`);
+const [JavaScriptSubmission] = useState(`const form = document.getElementById("myForm");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // Prevent form submission
+  console.log("Form submission prevented!");
+});
+`);
 
 
 
 
 
      
-  return { ArrowFunctions, Regularfunctions, SyntaxSimplicity, NoargumentsObject, ArraysCode, ObjectsCode, PropertiesIndividually, varCode, letCode, constCode, CopyinganArray, MergingArrays, CopyinganObject, MergingObjects, MergeTwoArrays, StringInterpolation, MultiLineStrings, BeforeES6, HandleMissingArguments, ReduceBoilerplateCode, SimplifyOptionalParameters, DictionarywithMap, forofExample, forinExample, UsingforofwithString, KeyDifference, ExampleUsagePromises,  ProjectPromises, ExampleUsage, Withoutasync, Withasync
+  return { ArrowFunctions, Regularfunctions, SyntaxSimplicity, NoargumentsObject, ArraysCode, ObjectsCode, PropertiesIndividually, varCode, letCode, constCode, CopyinganArray, MergingArrays, CopyinganObject, MergingObjects, MergeTwoArrays, StringInterpolation, MultiLineStrings, BeforeES6, HandleMissingArguments, ReduceBoilerplateCode, SimplifyOptionalParameters, DictionarywithMap, forofExample, forinExample, UsingforofwithString, KeyDifference, ExampleUsagePromises,  ProjectPromises, ExampleUsage, Withoutasync, Withasync, AccessElements, ModifyContent, ChangeStyles, AddorRemoveElements, HandleEvents, getElementById, querySelector, querySelectorAll, HTMLCode, JavaScriptCode, addEventListenerCode, ExampleClickEvent, MultipleListeners, SupportsEventOptions, EventDelegation, JavaScriptDelegation, ExampleDynamicAddition, innerHTM, textContent, innerTexts, UsingstyleProperty, UsingclassList, CSSExample, UsingsetAttribute, parentNode, firstChild, lastChild, nextSibling, previousSibling, children, firstElementChild, nextElementSibling, ExampleSibling, JavaScriptSibling, preventDefault, stopPropagation, PreventsSubmission, JavaScriptSubmission
     
 
   };
