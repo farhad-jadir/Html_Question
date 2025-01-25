@@ -533,6 +533,187 @@ updateConnectionStatus();
 window.addEventListener("online", updateConnectionStatus);
 window.addEventListener("offline", updateConnectionStatus);
 `);
+const [fetcheddata] = useState(`// Fetch data from JSONPlaceholder and display on page
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response => response.json()) // Convert response to JSON
+  .then(data => {
+    const container = document.getElementById('data-container');
+    data.forEach(post => {
+      const postElement = document.createElement('div');
+      postElement.innerHTML = \`<h3>\${post.title}</h3><p>\${post.body}</p>\`;
+      container.appendChild(postElement);
+    });
+  })
+  .catch(error => console.error('Error fetching data:', error));
+`);
+const [automaticallyhandles] = useState(`const xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts');
+xhr.onload = () => console.log(xhr.responseText);
+xhr.send();
+`);
+const [Fetchautomatically] = useState(`fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response => response.json())
+  .then(data => console.log(data));
+`);
+const [StringifyJSON] = useState(`// JSON string
+const jsonString = '{"name": "Johny", "age": 25}';
+
+// Parse JSON into JavaScript object
+const user = JSON.parse(jsonString);
+console.log(user.name); // Output: Johny
+
+// Stringify JavaScript object into JSON
+const jsonData = JSON.stringify({ city: "Dhaka", country: "Bangladesh" });
+console.log(jsonData); // Output: {"city":"Dhaka","country":"Bangladesh"}
+`);
+const [ParseStringify] = useState(`function convertObject(obj) {
+  // Convert object to JSON string
+  const jsonString = JSON.stringify(obj);
+  console.log("JSON String:", jsonString);
+
+  // Convert JSON string back to object
+  const parsedObject = JSON.parse(jsonString);
+  console.log("Parsed Object:", parsedObject);
+
+  return parsedObject;
+}
+
+// Test the function
+const myObject = { name: "Johny", age: 25, country: "Bangladesh" };
+convertObject(myObject);
+`);
+const [AccessControl] = useState(`Access-Control-Allow-Origin: *
+`);
+const [FormDataObject] = useState(`// Get form data
+const form = document.querySelector('form');
+const formData = new FormData(form);
+
+// Add custom data
+formData.append('customField', 'customValue');
+
+// Send via Fetch API
+fetch('https://example.com/api', {
+  method: 'POST',
+  body: formData,
+})
+  .then(response => response.json())
+  .then(data => console.log('Success:', data))
+  .catch(error => console.error('Error:', error));
+`);
+const [SinglePageNavigationt] = useState(`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPA Navigation</title>
+</head>
+<body>
+  <nav>
+    <a href="/home" data-link>Home</a>
+    <a href="/about" data-link>About</a>
+    <a href="/contact" data-link>Contact</a>
+  </nav>
+  <div id="content"></div>
+
+  <script>
+    const routes = {
+      '/home': '<h1>Welcome to Home</h1>',
+      '/about': '<h1>About Us</h1>',
+      '/contact': '<h1>Contact Us</h1>',
+    };
+
+    function navigateTo(url) {
+      history.pushState(null, null, url);
+      renderContent(url);
+    }
+
+    function renderContent(url) {
+      const content = document.getElementById('content');
+      content.innerHTML = routes[url] || '<h1>404 - Page Not Found</h1>';
+    }
+
+    document.addEventListener('click', (e) => {
+      if (e.target.matches('[data-link]')) {
+        e.preventDefault();
+        navigateTo(e.target.href);
+      }
+    });
+
+    // Handle browser back/forward
+    window.addEventListener('popstate', () => {
+      renderContent(location.pathname);
+    });
+
+    // Initial render
+    renderContent(location.pathname);
+  </script>
+</body>
+</html>
+`);
+const [catchwithasync] = useState(`async function fetchData() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    if (!response.ok) throw new Error(\`HTTP error! Status: \${response.status}\`);
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
+}
+fetchData();
+`);
+  const [catchwithPromises] = useState(`fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response => {
+    if (!response.ok) throw new Error(\`HTTP error! Status: \${response.status}\`);
+    return response.json();
+  })
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error.message));
+`);
+const [WebSockets] = useState(`fetch('const socket = new WebSocket('wss://example.com/socket');
+
+// Listen for messages
+socket.onmessage = (event) => {
+  console.log('Message from server:', event.data);
+};
+
+// Send a message
+socket.send('Hello, Server!');
+`);
+const [communication] = useState(`fetch('https://example.com/api')
+  .then(response => response.json())
+  .then(data => console.log(data));
+`);
+const [BackgroundSync] = useState(`// Register the service worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+    .then(() => console.log('Service Worker Registered'))
+    .catch(error => console.error('Registration failed:', error));
+}
+
+// service-worker.js
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open('v1').then((cache) => {
+      return cache.addAll([
+        '/',
+        '/index.html',
+        '/styles.css',
+        '/script.js',
+        '/offline.html',
+      ]);
+    })
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      return response || fetch(event.request).catch(() => caches.match('/offline.html'));
+    })
+  );
+});
+`);
                               
 
 
@@ -540,7 +721,7 @@ window.addEventListener("offline", updateConnectionStatus);
 
 
      
-  return { ArrowFunctions, Regularfunctions, SyntaxSimplicity, NoargumentsObject, ArraysCode, ObjectsCode, PropertiesIndividually, varCode, letCode, constCode, CopyinganArray, MergingArrays, CopyinganObject, MergingObjects, MergeTwoArrays, StringInterpolation, MultiLineStrings, BeforeES6, HandleMissingArguments, ReduceBoilerplateCode, SimplifyOptionalParameters, DictionarywithMap, forofExample, forinExample, UsingforofwithString, KeyDifference, ExampleUsagePromises,  ProjectPromises, ExampleUsage, Withoutasync, Withasync, AccessElements, ModifyContent, ChangeStyles, AddorRemoveElements, HandleEvents, getElementById, querySelector, querySelectorAll, HTMLCode, JavaScriptCode, addEventListenerCode, ExampleClickEvent, MultipleListeners, SupportsEventOptions, EventDelegation, JavaScriptDelegation, ExampleDynamicAddition, innerHTM, textContent, innerTexts, UsingstyleProperty, UsingclassList, CSSExample, UsingsetAttribute, parentNode, firstChild, lastChild, nextSibling, previousSibling, children, firstElementChild, nextElementSibling, ExampleSibling, JavaScriptSibling, preventDefault, stopPropagation, PreventsSubmission, JavaScriptSubmission, StoreandRetrieve, windowopen, newwindow, windowinnerWidth, OutputtExample, setTimeoutCode, setIntervalCode, setIntervaltCode, setIntervalttCode, singsetInterval, navigatoronLine, OnlineandOfflineEvent, OnlineOfflineStatus
+  return { ArrowFunctions, Regularfunctions, SyntaxSimplicity, NoargumentsObject, ArraysCode, ObjectsCode, PropertiesIndividually, varCode, letCode, constCode, CopyinganArray, MergingArrays, CopyinganObject, MergingObjects, MergeTwoArrays, StringInterpolation, MultiLineStrings, BeforeES6, HandleMissingArguments, ReduceBoilerplateCode, SimplifyOptionalParameters, DictionarywithMap, forofExample, forinExample, UsingforofwithString, KeyDifference, ExampleUsagePromises,  ProjectPromises, ExampleUsage, Withoutasync, Withasync, AccessElements, ModifyContent, ChangeStyles, AddorRemoveElements, HandleEvents, getElementById, querySelector, querySelectorAll, HTMLCode, JavaScriptCode, addEventListenerCode, ExampleClickEvent, MultipleListeners, SupportsEventOptions, EventDelegation, JavaScriptDelegation, ExampleDynamicAddition, innerHTM, textContent, innerTexts, UsingstyleProperty, UsingclassList, CSSExample, UsingsetAttribute, parentNode, firstChild, lastChild, nextSibling, previousSibling, children, firstElementChild, nextElementSibling, ExampleSibling, JavaScriptSibling, preventDefault, stopPropagation, PreventsSubmission, JavaScriptSubmission, StoreandRetrieve, windowopen, newwindow, windowinnerWidth, OutputtExample, setTimeoutCode, setIntervalCode, setIntervaltCode, setIntervalttCode, singsetInterval, navigatoronLine, OnlineandOfflineEvent, OnlineOfflineStatus, fetcheddata, automaticallyhandles, Fetchautomatically, StringifyJSON, ParseStringify, AccessControl, FormDataObject, SinglePageNavigationt, catchwithasync, catchwithPromises, WebSockets, communication, BackgroundSync
     
 
   };
