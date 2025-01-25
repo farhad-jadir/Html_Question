@@ -455,13 +455,92 @@ form.addEventListener("submit", (event) => {
   console.log("Form submission prevented!");
 });
 `);
+const [StoreandRetrieve] = useState(`// Save user's theme preference in localStorage
+function saveThemePreference(theme) {
+    localStorage.setItem("theme", theme);
+}
+
+// Retrieve and apply user's theme preference
+function applyThemePreference() {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        document.body.className = savedTheme; // Assuming themes are set as class names (e.g., 'dark', 'light')
+    }
+}
+
+// Example usage
+saveThemePreference("dark"); // Saves 'dark' theme
+applyThemePreference(); // Applies the saved theme when the page loads
+`);
+const [windowopen] = useState(`window.open(URL, name, specs);
+`);
+const [newwindow] = useState(`window.open("https://example.com", "_blank", "width=800,height=600");
+`);
+const [windowinnerWidth] = useState(`// Function to log the viewport width and height
+function logWindowSize() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    console.log(\`Viewport size: \${width}px x \${height}px\`);
+}
+
+// Add an event listener to the 'resize' event
+window.addEventListener("resize", logWindowSize);
+
+// Initial log of the window size when the script runs
+logWindowSize();
+`);
+const [OutputtExample] = useState(`Viewport size: 1024px x 768px
+Viewport size: 800px x 600px
+`);
+const [setTimeoutCode] = useState(`setTimeout(function, delay);
+`);
+  const [setIntervalCode] = useState(`setTimeout(() => console.log("This runs after 2 seconds"), 2000);
+`);
+    const [setIntervaltCode] = useState(`setInterval(function, interval);
+`);
+      const [setIntervalttCode] = useState(`setInterval(() => console.log("This runs every 1 second"), 1000);
+`);
+        const [singsetInterval] = useState(`function startClock() {
+    const clockElement = document.getElementById("clock");
+
+    function updateClock() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString(); // Formats time as HH:MM:SS
+        clockElement.textContent = timeString;
+    }
+
+    setInterval(updateClock, 1000); // Update clock every second
+}
+
+// HTML element for the clock
+document.body.innerHTML = '<div id="clock" style="font-size: 2rem; font-family: Arial;"></div>';
+startClock();
+`);
+const [navigatoronLine] = useState(`console.log(navigator.onLine ? "User is online" : "User is offline");
+`);
+const [OnlineandOfflineEvent] = useState(`window.addEventListener("online", () => console.log("User is back online"));
+window.addEventListener("offline", () => console.log("User went offline"));
+`);
+const [OnlineOfflineStatus] = useState(`function updateConnectionStatus() {
+    const status = navigator.onLine ? "Online" : "Offline";
+    console.log(\`User is currently: \${status}\`);
+}
+
+// Check initial status
+updateConnectionStatus();
+
+// Listen for connection changes
+window.addEventListener("online", updateConnectionStatus);
+window.addEventListener("offline", updateConnectionStatus);
+`);
+                              
 
 
 
 
 
      
-  return { ArrowFunctions, Regularfunctions, SyntaxSimplicity, NoargumentsObject, ArraysCode, ObjectsCode, PropertiesIndividually, varCode, letCode, constCode, CopyinganArray, MergingArrays, CopyinganObject, MergingObjects, MergeTwoArrays, StringInterpolation, MultiLineStrings, BeforeES6, HandleMissingArguments, ReduceBoilerplateCode, SimplifyOptionalParameters, DictionarywithMap, forofExample, forinExample, UsingforofwithString, KeyDifference, ExampleUsagePromises,  ProjectPromises, ExampleUsage, Withoutasync, Withasync, AccessElements, ModifyContent, ChangeStyles, AddorRemoveElements, HandleEvents, getElementById, querySelector, querySelectorAll, HTMLCode, JavaScriptCode, addEventListenerCode, ExampleClickEvent, MultipleListeners, SupportsEventOptions, EventDelegation, JavaScriptDelegation, ExampleDynamicAddition, innerHTM, textContent, innerTexts, UsingstyleProperty, UsingclassList, CSSExample, UsingsetAttribute, parentNode, firstChild, lastChild, nextSibling, previousSibling, children, firstElementChild, nextElementSibling, ExampleSibling, JavaScriptSibling, preventDefault, stopPropagation, PreventsSubmission, JavaScriptSubmission
+  return { ArrowFunctions, Regularfunctions, SyntaxSimplicity, NoargumentsObject, ArraysCode, ObjectsCode, PropertiesIndividually, varCode, letCode, constCode, CopyinganArray, MergingArrays, CopyinganObject, MergingObjects, MergeTwoArrays, StringInterpolation, MultiLineStrings, BeforeES6, HandleMissingArguments, ReduceBoilerplateCode, SimplifyOptionalParameters, DictionarywithMap, forofExample, forinExample, UsingforofwithString, KeyDifference, ExampleUsagePromises,  ProjectPromises, ExampleUsage, Withoutasync, Withasync, AccessElements, ModifyContent, ChangeStyles, AddorRemoveElements, HandleEvents, getElementById, querySelector, querySelectorAll, HTMLCode, JavaScriptCode, addEventListenerCode, ExampleClickEvent, MultipleListeners, SupportsEventOptions, EventDelegation, JavaScriptDelegation, ExampleDynamicAddition, innerHTM, textContent, innerTexts, UsingstyleProperty, UsingclassList, CSSExample, UsingsetAttribute, parentNode, firstChild, lastChild, nextSibling, previousSibling, children, firstElementChild, nextElementSibling, ExampleSibling, JavaScriptSibling, preventDefault, stopPropagation, PreventsSubmission, JavaScriptSubmission, StoreandRetrieve, windowopen, newwindow, windowinnerWidth, OutputtExample, setTimeoutCode, setIntervalCode, setIntervaltCode, setIntervalttCode, singsetInterval, navigatoronLine, OnlineandOfflineEvent, OnlineOfflineStatus
     
 
   };
