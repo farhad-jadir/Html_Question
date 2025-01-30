@@ -3,10 +3,11 @@ import clsx from "clsx";
 import { baseParagraphClasses } from "../utils/ClassNames";
 import CodeHighlighter from "./CodeHighlighter";
 import CodeExamples from "./CodeExamples";
-import FirstStep from "../CSSDocumention/firstStep";
-import SecondStep from "../CSSDocumention/secondStep";
-import ThirdStep from "../CSSDocumention/thirdStep";
-import FourthStep from "../CSSDocumention/fourthStep";
+import Basic from "../ReactDocumentation/Basic";
+import Intermediate from "../ReactDocumentation/Intermediate";
+import ReactRouter from "../ReactDocumentation/ReactRouter";
+import AdvancedInterview from "../ReactDocumentation/AdvancedInterview";
+import RealLife from "../ReactDocumentation/RealLife";
 
 function Paragraph({ children, type = "question", additionalClasses = "" }) {
   const paragraphClass = clsx(baseParagraphClasses[type], additionalClasses);
@@ -20,10 +21,11 @@ function ReactJs() {
   return (
     <div className="space-y-4">
 
-      <FirstStep/>
-      <SecondStep/>
-      <ThirdStep/>
-      <FourthStep/>
+      <Basic/>
+      <Intermediate/>
+      <ReactRouter/>
+      <AdvancedInterview/>
+      <RealLife/>
       
      
       

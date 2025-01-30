@@ -1,8 +1,5 @@
 import React from "react";
 import clsx from "clsx";
-import { baseParagraphClasses } from "../utils/ClassNames";
-import CodeHighlighter from "./CodeHighlighter";
-import CodeExamples from "./CodeExamples";
 import JavaScriptFundamentals from "../JavascriptDocumentation/JavaScriptFundamentals";
 import Functions from "../JavascriptDocumentation/Functions";
 import ArraysandStrings from "../JavascriptDocumentation/ArraysandStrings";
@@ -15,9 +12,7 @@ function Paragraph({ children, type = "question", additionalClasses = "" }) {
 }
 
 function JavaScript() {
-  const { basicCode,   } = CodeExamples();
-    
-    
+      
   return (
     <div className="space-y-4">
 
