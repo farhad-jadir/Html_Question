@@ -656,12 +656,177 @@ const MyComponent = () => {
   return <div>{data}</div>;
 };
 `);
+const [FeaturesandBenefits] = useState(`// Create
+const addItem = (item) => setItems([...items, item]);
+
+// Read
+const itemsList = items.map(item => <div key={item.id}>{item.name}</div>);
+
+// Update
+const updateItem = (updatedItem) => setItems(
+  items.map(item => item.id === updatedItem.id ? updatedItem : item)
+);
+
+// Delete
+const deleteItem = (id) => setItems(items.filter(item => item.id !== id));
+`);
+  const [FormHandling] = useState(`const MyForm = () => {
+  const [input, setInput] = useState('');
+
+  const handleChange = (e) => setInput(e.target.value);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(input);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="text" value={input} onChange={handleChange} />
+      <button type="submit">Submit</button>
+    </form>
+  );
+};
+`);
+    const [PropsCode] = useState(`const Parent = () => <Child message="Hello, World!" />;
+
+const Child = ({ message }) => <div>{message}</div>;
+`);
+      const [StateCode] = useState(`const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+};
+`);
+const [environmentsetup] = useState(`import React, { useState } from 'react';
+
+const ContactManager = () => {
+  const [contacts, setContacts] = useState([]);
+  const [name, setName] = useState('');
+  const [editingIndex, setEditingIndex] = useState(null);
+
+  const addContact = () => {
+    if (editingIndex !== null) {
+      const updatedContacts = contacts.map((contact, index) => 
+        index === editingIndex ? name : contact
+      );
+      setContacts(updatedContacts);
+      setEditingIndex(null);
+    } else {
+      setContacts([...contacts, name]);
+    }
+    setName('');
+  };
+
+  const editContact = (index) => {
+    setName(contacts[index]);
+    setEditingIndex(index);
+  };
+
+  const deleteContact = (index) => {
+    setContacts(contacts.filter((_, i) => i !== index));
+  };
+
+  return (
+    <div>
+      <h2>Contact Manager</h2>
+      <input 
+        type="text" 
+        value={name} 
+        onChange={(e) => setName(e.target.value)} 
+        placeholder="Enter contact name"
+      />
+      <button onClick={addContact}>
+        {editingIndex !== null ? 'Edit Contact' : 'Add Contact'}
+      </button>
+      <ul>
+        {contacts.map((contact, index) => (
+          <li key={index}>
+            {contact}
+            <button onClick={() => editContact(index)}>Edit</button>
+            <button onClick={() => deleteContact(index)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ContactManager;
+`);
+const [NamePhoneNumberEmail] = useState(`import React, { useState } from 'react';
+
+const ContactManager = () => {
+  const [contacts, setContacts] = useState([
+    { id: 1, name: 'John Doe', phone: '123-456-7890', email: 'john@example.com' },
+    { id: 2, name: 'Jane Smith', phone: '987-654-3210', email: 'jane@example.com' },
+  ]);
+
+  return (
+    <div>
+      <h2>Contact List</h2>
+      <ul>
+        {contacts.map(contact => (
+          <li key={contact.id}>
+            <div><strong>Name:</strong> {contact.name}</div>
+            <div><strong>Phone:</strong> {contact.phone}</div>
+            <div><strong>Email:</strong> {contact.email}</div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ContactManager;
+`);
+const [contactsName] = useState(`import React, { useState } from 'react';
+
+const ContactManager = () => {
+  const [contacts, setContacts] = useState([
+    { id: 1, name: 'John Doe', phone: '123-456-7890', email: 'john@example.com' },
+    { id: 2, name: 'Jane Smith', phone: '987-654-3210', email: 'jane@example.com' },
+  ]);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredContacts = contacts.filter(contact =>
+    contact.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <div>
+      <h2>Contact List</h2>
+      <input
+        type="text"
+        placeholder="Search by name"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <ul>
+        {filteredContacts.map(contact => (
+          <li key={contact.id}>
+            <div><strong>Name:</strong> {contact.name}</div>
+            <div><strong>Phone:</strong> {contact.phone}</div>
+            <div><strong>Email:</strong> {contact.email}</div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ContactManager;
+`);
         
         
 
 
      
-  return { InstallationReact, DefineRoutes, BrowserRouter,HashRouter, MemoryRouter, InstallReactRouter, SetUpRoutes, NavigationwithLink, ProgrammaticNavigation, NestedRoutes, SwitchandRoute, SwitchCode, theRoutes, CreateComponent, theRoutesode, DynamicComponentCode, UsinguseHistory, ReactPortals, UseReactPortals, SetupCodeSplitting, SetupLazyLoading, ConcurrentMode, SimplerCode, WrapComponents, ClientSide, ServerSide, InstallNextjs, CreateaPage, improveSSR, severalbenefits, SuspensecODE, SuspenseinReact, CodeReusability, FolderStructure, DeprecationWarnings, ReactmemoCode,useCallbackCode, useMemoCode, PureComponentCode, DebouncingCode, ThrottlingCode, PropTypesCode, KeyApproaches, ReducerFunction, UseBuiltinHooks
+  return { InstallationReact, DefineRoutes, BrowserRouter,HashRouter, MemoryRouter, InstallReactRouter, SetUpRoutes, NavigationwithLink, ProgrammaticNavigation, NestedRoutes, SwitchandRoute, SwitchCode, theRoutes, CreateComponent, theRoutesode, DynamicComponentCode, UsinguseHistory, ReactPortals, UseReactPortals, SetupCodeSplitting, SetupLazyLoading, ConcurrentMode, SimplerCode, WrapComponents, ClientSide, ServerSide, InstallNextjs, CreateaPage, improveSSR, severalbenefits, SuspensecODE, SuspenseinReact, CodeReusability, FolderStructure, DeprecationWarnings, ReactmemoCode,useCallbackCode, useMemoCode, PureComponentCode, DebouncingCode, ThrottlingCode, PropTypesCode, KeyApproaches, ReducerFunction, UseBuiltinHooks, FeaturesandBenefits, FormHandling, PropsCode, StateCode, environmentsetup, NamePhoneNumberEmail, contactsName
     
 
   };
