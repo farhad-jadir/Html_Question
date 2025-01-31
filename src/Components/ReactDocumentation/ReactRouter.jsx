@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import { baseParagraphClasses } from "../utils/ClassNames";
 import CodeHighlighter from "../documentation/CodeHighlighter";
-import ReactCoding from "./ReactCoding";
+import ReactRouterCoding from "./ReactRouterCoding";
 
 function Paragraph({ children, type = "question", additionalClasses = "" }) {
   const paragraphClass = clsx(baseParagraphClasses[type], additionalClasses);
@@ -10,7 +10,7 @@ function Paragraph({ children, type = "question", additionalClasses = "" }) {
 }
 
 function ReactRouter () {
-  const {InstallationReact, DefineRoutes, BrowserRouter,HashRouter, MemoryRouter, InstallReactRouter, SetUpRoutes, NavigationwithLink, ProgrammaticNavigation, NestedRoutes, SwitchandRoute, SwitchCode, theRoutes, CreateComponent, theRoutesode, DynamicComponentCode, UsinguseHistory } = ReactCoding();
+  const {InstallationReact, DefineRoutes, BrowserRouter,HashRouter, MemoryRouter, InstallReactRouter, SetUpRoutes, NavigationwithLink, ProgrammaticNavigation, NestedRoutes, SwitchandRoute, SwitchCode, theRoutes, CreateComponent, theRoutesode, DynamicComponentCode, UsinguseHistory } = ReactRouterCoding();
   return (
     <div className="bg-[#101C28] p-2">
 
